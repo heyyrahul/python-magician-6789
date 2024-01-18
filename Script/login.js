@@ -1,4 +1,3 @@
-    
 // Catch the Signup elements
 let inptsignUpName = document.getElementById("signUpName");
 let inptsignUpEmail = document.getElementById("signUpEmail");
@@ -24,15 +23,35 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
-signup.addEventListener("click", (e) => {
+signup.addEventListener("click", async (e) => {
     e.preventDefault();
-    signUp();
+
+    // Check if all fields are filled
+    if (!inptsignUpName.value || !inptsignUpEmail.value || !inptsignUpPassword.value) {
+        alert("Please fill in all the fields.");
+        return;
+    }
+
+    // Check if the email already exists
+    const existingUser = await checkExistingUser(inptsignUpEmail.value);
+
+    if (existingUser) {
+        alert("Email already registered, please use a different email.");
+    } else {
+        signUp();
+    }
 });
 
-signIn.addEventListener("click", (e) => {
-    e.preventDefault();
-    signInUser();
-});
+async function checkExistingUser(email) {
+    try {
+        const response = await fetch('https://kushagrapathak-mock-api-server.onrender.com/users');
+        const users = await response.json();
+        return users.some(u => u.email === email);
+    } catch (error) {
+        console.error('Error checking existing user:', error);
+        return false;
+    }
+}
 
 async function signUp() {
     let user = {
@@ -53,7 +72,7 @@ async function signUp() {
         if (response.ok) {
             alert("Sign up successful!");
         } else {
-            alert("Email already registered, please use a different email.");
+            alert("Error during sign up. Please try again.");
         }
     } catch (error) {
         console.error('Error during sign up:', error);
@@ -61,6 +80,12 @@ async function signUp() {
 }
 
 async function signInUser() {
+    // Check if all fields are filled
+    if (!inpsignInEmail.value || !inpsignInPassword.value) {
+        alert("Please fill in all the fields.");
+        return;
+    }
+
     let signInCredentials = {
         email: inpsignInEmail.value,
         password: inpsignInPassword.value
@@ -74,7 +99,6 @@ async function signInUser() {
 
         if (user) {
             alert("Login successful!");
-       
             window.location.href = '/home.html';
         } else {
             alert("Invalid email or password.");
@@ -83,4 +107,3 @@ async function signInUser() {
         console.error('Error during sign in:', error);
     }
 }
-
