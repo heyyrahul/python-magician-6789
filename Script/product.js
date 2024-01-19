@@ -22,17 +22,22 @@ const checkValues = () => {
   let loanTenureValue = loanTenureInput.value;
 
   let regexNumber = /^[0-9]+$/;
-  if (!loanAmountValue.match(regexNumber)) {
-    loanAmountInput.value = "10000";
+  if ( loanAmountValue < 0 || isNaN(loanAmountValue)) {
+    // loanAmountInput.value = "10000";
+    alert("Please enter valid amount");
+    return false;
   }
 
-  if (!loanTenureValue.match(regexNumber)) {
-    loanTenureInput.value = "12";
+  if ( loanTenureValue < 0 || isNaN(loanTenureValue)) {
+    // loanTenureInput.value = "12";
+    alert("Please enter valid intrest rate");
+    return false;
   }
 
-  let regexDecimalNumber = /^(\d*\.)?\d+$/;
-  if (!interestRateValue.match(regexDecimalNumber)) {
-    interestRateInput.value = "7.5";
+  if (interestRateValue < 0 || isNaN(interestRateValue) ) {
+    // interestRateInput.value = "7.5";
+    alert("Please enter a valid number");
+    return false;
   }
 };
 
@@ -67,7 +72,9 @@ const refreshInputValues = () => {
 };
 
 const calculateEMI = () => {
-  checkValues();
+  if (checkValues() === false) {
+    return false;
+  }
   refreshInputValues();
   let emi =
     loanAmount *
@@ -81,31 +88,46 @@ const calculateTotalAmount = (emi) => {
   let totalAmount = Math.round(emi * loanTenure);
   return totalAmount;
 };
-
 const updateData = (emi) => {
-  loanEMIValue.innerHTML = Math.round(emi);
+    console.log('in updateData', emi, isNaN(emi));
+    loanEMIValue.innerHTML = (isNaN(emi) ? 0 : Math.round(emi));
 
-  let totalAmount = calculateTotalAmount(emi);
-  totalAmountValue.innerHTML = totalAmount;
+    let totalAmount = calculateTotalAmount(emi);
+    totalAmountValue.innerHTML = (isNaN(totalAmount) ? 0 : Math.round(totalAmount));
 
-  let totalInterestPayable = Math.round(totalAmount - loanAmount);
-  totalInterestValue.innerHTML = totalInterestPayable;
+    let totalInterestPayable = Math.round(totalAmount - loanAmount);
+    totalInterestValue.innerHTML = (isNaN(totalInterestPayable) ? 0 : Math.round(totalInterestPayable));
 
-  if (myChart) {
-    updateChart(totalInterestPayable);
-  } else {
-    displayChart(totalInterestPayable);
-  }
+    if (myChart) {
+        updateChart(totalInterestPayable);
+    } else {
+        displayChart(totalInterestPayable);
+    }
 };
+
 
 const calculateAndUpdate = () => {
   let emi = calculateEMI();
+  console.log('in calculateAndUpdate ', emi);
+  if (emi === false) {
+    return false;
+  }
+//   console.log('in calculateAndUpdate before update', emi);
   updateData(emi);
+//   console.log('in calculateAndUpdate after update', emi);
 };
 
-const init = () => {
-  calculateAndUpdate();
-};
+document.addEventListener("DOMContentLoaded", function() {
+    // Your existing code here
+  
+    const init = () => {
+      calculateAndUpdate();
+    };
+  
+    calculateBtn.addEventListener("click", calculateAndUpdate);
+    init();
+  });
+Z  
 
 calculateBtn.addEventListener("click", calculateAndUpdate);
 init();
