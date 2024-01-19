@@ -1,0 +1,166 @@
+/* CSS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#summary {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #D5F8E7;
+}
+#summary >p{
+    font-size: large;
+    font-weight:500;
+}
+#totalLoanAmount, #totalAmountPaid, #remainingAmount {
+    margin: 0;
+}
+
+.customer-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 5%;
+    border-radius: 8px;
+    background-color: #D5F8E7;
+    width: calc(50% - 20px);    
+    margin-right: 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.customer-card:nth-child(2n) {
+    margin-right: 0; 
+}
+
+#pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#pagination button {
+   margin: 0px 20px;
+   padding: 5px 20px;
+    cursor: pointer;
+    background-color: #D5F8E7;
+    border-radius: 5px;
+}
+
+#pieChart {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+.pieChart{
+    display: flex;
+    justify-content: space-around;
+    height: 400px;
+    padding-bottom: 3%;
+}
+.pieChart > img {
+    width: 400px;
+}
+#customerDetails{
+    /* background-color: gray; */
+    display: grid;;
+    grid-template-columns: repeat(2,1fr);
+    margin-right: 15%;
+    
+   
+}
+
+#secondimg{
+    position: absolute;
+    right: 0%;
+    top: 100%;
+    width: 500px;
+}
+
+/* * navbar------------------------------------------------------------------------- */ 
+.navbar {
+    /* width: 100%; */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7FC1B1;
+    padding: 1.5% 5%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 90%;
+    margin-top: -2%;
+}
+
+.logobox {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logo-gradient-text {
+    font-size: 2rem;
+    background: linear-gradient(45deg,
+            #e6fcf1,
+            #cbfee5,
+            #bbf9db,
+            #cbfee5,
+            #e6fcf1);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.menues {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    text-decoration: none;
+    color: white;
+    margin: 0 25px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.menu:hover {
+    color: #434d4a;
+    border-bottom: 2px solid #434d4a;
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;}
+
+.loginbtn {
+    background: linear-gradient(45deg,
+            #e6fcf1,
+            #cbfee5,
+            #bbf9db,
+            #cbfee5,
+            #e6fcf1);
+    color: black;
+
+    padding: 0.7% 2.5%;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.loginbtn:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+}
+#adminPage{
+    display: flex;
+    justify-content: space-between;
+}
