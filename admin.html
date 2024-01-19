@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Admin Page</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!---------------------- Navbar ----------------------->
+  <nav class="navbar">
+    <div class="logobox">
+        <a href="index.html" style="text-decoration: none;"><span class="logo-gradient-text logotxt">SyLoan</span></a>
+    </div>
+    <div class="menues">
+        <a class="menu" href="product.html">Product</a>
+        <a class="menu" href="company.html">Company</a>
+        <a class="menu" href="support.html">Support</a>
+    </div>
+    
+</nav>
+    <div id="adminPage" >
+        <h1 id="adminName">Hello Admin</h1>
+        <a href="adminlogin.html" style="text-decoration: none;color: black;"><h1>Sign Out</h1></a>
+    </div>
+
+    <div id="summary">
+        <p id="totalLoanAmount">Total Loan Amount: ₹0.00</p> <span style="font-size: 50px;">|</span>
+        <p id="totalAmountPaid">Total Amount Paid: ₹0.00</p> <span style="font-size: 50px;">|</span>
+        <p id="remainingAmount">Remaining Amount: ₹0.00</p>
+    </div>
+
+    <div class="pieChart">
+        <canvas id="pieChart" width="300px" height="300px"></canvas>
+        <img src="images/adminimg.jpg" alt="">
+    </div>
+
+    <h1 style="text-align:center;">Customer's Details</h1>
+    <div id="customerDetails" class="customer-cards"></div>
+    
+    <img src="images/admin2.jpg" alt="" id="secondimg">
+    <div id="pagination"></div>
+
+    <script src="Script/admin.js"></script>
+    <script src="Script/adminlogin.js"></script>
+</body>
+</html>

@@ -16,6 +16,7 @@ body{
     flex-direction: column;
     height: 100vh;
     /* background-image: url(loginpic.jpg); */
+   
 }
 #vectorPng{
     /* position: fixed;
@@ -28,8 +29,9 @@ body{
     height: 500px;
     width: 500px;
     z-index: 10;
-    position: fixed;
+    position: absolute;
     left: 70px;
+    top: 18%;
 }
 .backpic img{
     height: 100%;
@@ -38,7 +40,7 @@ body{
 }
 .container{
     background-color:white;
-
+    margin-top: 5%;
     
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
@@ -156,9 +158,9 @@ body{
   
  
 }
-.fa-brands{
+/* .fa-brands{
     /* border:1px solid #88B702; */
-}
+/* } */ 
 
 .social-icons a{
     border: 1px solid #ccc;
@@ -273,4 +275,82 @@ body{
 }
 .sign-inbutton:active,.hidden:active{
     scale: 1;
+}
+
+/* navbar------------------------------------------------------------------------- */
+.navbar {
+    /* width: 100%; */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7FC1B1;
+    padding: 1.5% 5%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    margin-top: -11%;
+    margin-bottom: 5%;
+}
+
+.logobox {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logo-gradient-text {
+    font-size: 2rem;
+    background: linear-gradient(45deg,
+            #e6fcf1,
+            #cbfee5,
+            #bbf9db,
+            #cbfee5,
+            #e6fcf1);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.menues {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    text-decoration: none;
+    color: white;
+    margin: 0 25px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.menu:hover {
+    color: #434d4a;
+    border-bottom: 2px solid #434d4a;
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;}
+
+.loginbtn {
+    background: linear-gradient(45deg,
+            #e6fcf1,
+            #cbfee5,
+            #bbf9db,
+            #cbfee5,
+            #e6fcf1);
+    color: black;
+
+    padding: 0.7% 2.5%;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.loginbtn:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
 }
