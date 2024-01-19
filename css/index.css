@@ -12,7 +12,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #7FC1B1;
-    padding: 1% 5%;
+    padding: 1.5% 5%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -28,11 +28,11 @@ body {
 .logo-gradient-text {
     font-size: 2rem;
     background: linear-gradient(45deg,
-    #e6fcf1,
-    #cbfee5,
-    #bbf9db,
-    #cbfee5,
-    #e6fcf1);
+            #e6fcf1,
+            #cbfee5,
+            #bbf9db,
+            #cbfee5,
+            #e6fcf1);
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -55,28 +55,28 @@ body {
     color: #434d4a;
     border-bottom: 2px solid #434d4a;
     transform: scale(1.05);
-}
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;}
 
 .loginbtn {
     background: linear-gradient(45deg,
-    #e6fcf1,
-    #cbfee5,
-    #bbf9db,
-    #cbfee5,
-    #e6fcf1);
-    /* -webkit-background-clip: text; */
+            #e6fcf1,
+            #cbfee5,
+            #bbf9db,
+            #cbfee5,
+            #e6fcf1);
     color: black;
 
-padding: 0.7% 2.5%;
-border: none;
-border-radius: 20px;
-font-size: 1.2rem;
-cursor: pointer;
-transition: transform 0.3s ease;
+    padding: 0.7% 2.5%;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .loginbtn:hover {
     transform: scale(1.05);
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
 }
 
 /******************************** Header **********************************/
@@ -192,42 +192,44 @@ header {
 }
 
 /************************* How it Works *************************/
-.section-title{
-    text-align: center; 
-    color: #7FC1B1; 
-    font-size: 1.2rem; 
-    margin-top: 50px;
+.section-title {
+    text-align: center;
+    color: #7FC1B1;
+    font-size: 1.2rem;
+    margin-top: 70px;
 }
-.heading{
+
+.heading {
     text-align: center;
     font-size: 2.3rem;
     margin-top: -10px;
 }
+
 .steps {
     width: 90%;
     margin: auto;
     display: flex;
     justify-content: space-around;
     gap: 100px;
-  }
-  
-  .steps-right>img {
+}
+
+.steps-right>img {
     width: 500px;
     height: 450px;
     margin-top: -70px;
-  }
-  
-  .steps-left>div {
+}
+
+.steps-left>div {
     display: flex;
     align-items: center;
-  }
-  
-  .steps-left>div div:nth-child(2) {
+}
+
+.steps-left>div div:nth-child(2) {
     width: 70%;
     text-align: left;
-  }
-  
-  .steps-circle {
+}
+
+.steps-circle {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -237,47 +239,199 @@ header {
     justify-content: center;
     color: white;
     margin-right: 32px;
-  }
-  
-  /************************* Services *************************/
+}
 
-  .section-subheading{
+/************************* Services *************************/
+
+.section-subheading {
     margin-top: -15px;
     margin-bottom: 30px;
-    text-align: center; 
-  }
+    text-align: center;
+}
 
-  .service {
+.service {
     display: flex;
     flex-direction: column;
     width: 80%;
     margin: auto;
     margin-bottom: 50px;
-  }
-  
-  .service h2 {
+}
+
+.service h2 {
     color: #7FC1B1;
-    
-  }
-  
-  .service>div {
+
+}
+
+.service>div {
     display: flex;
     justify-content: space-around;
     height: 80px;
     align-items: center;
     padding: 0.8rem 1.5rem;
     border-bottom: 1px solid gray;
-  }
-  
-  .service>div h2{
+}
+
+.service>div h2 {
     width: 40%;
     font-size: 2rem;
-  }
-  .service i{
+}
+
+.service i {
     margin-right: 50px;
-  }
-  .service>div p{
+}
+
+.service>div p {
     width: 55%;
     font-size: 1.2rem;
+}
+
+/************************ Features **************************/
+.feature-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
-  
+  .feature-box {
+    height: 420px;
+    margin: 50px 20px;
+    background-size: cover;
+    color: black;
+    padding: 4% 5%;
+    padding-bottom: 70px;
+    text-align: left;
+    border: 3px solid #98decd;
+    border-radius: 50px;
+    transition: transform 0.4s ease; 
+    background: linear-gradient(rgba(213, 248, 231, 0.9), rgba(213, 248, 231, 0.9)), url('../images/black-calc.jpg') center/cover;
+}
+
+
+  .feature-box:hover{
+    box-shadow: #7FC1B1 0px 10px 35px 0px;
+    transform: scale(1.03);
+  }
+  .leftbox{
+    width: 60%;
+    
+  }
+  .leftbox>p{
+    width: 80%;
+    line-height: 30px;
+  }
+  .rightbox{
+    width: 40%;
+  }
+  .rightbox>p{
+    cursor: pointer;
+
+  }
+  .rightbox>p:hover{
+    width: 90px;
+    border-bottom: 2px solid black;
+  }
+
+/************************* Footer ****************************/
+.footer {
+    background-color: #7FC1B1;
+    color: black;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 70px;
+    text-align: left;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2%;
+}
+
+.footer-top h1 {
+    font-size: 4rem;
+    width: 80%;
+}
+.footer-top h1>span{
+    background: linear-gradient(45deg,
+    #e6fcf1,
+    #cbfee5,
+    #bbf9db,
+    #cbfee5,
+    #e6fcf1);
+    -webkit-background-clip: text;
+color: transparent;    cursor: pointer;
+}
+
+.contactusbtn {
+    width: 200px;
+    font-size: 1.2rem;
+    border: 0;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    background: linear-gradient(45deg,
+            #e6fcf1,
+            #cbfee5,
+            #bbf9db,
+            #cbfee5,
+            #e6fcf1);
+    color: black;
+    cursor: pointer;
+}
+.contactusbtn:hover{
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+    color: gray;
+}
+hr {
+    width: 95%;
+    border: 0.5px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 40px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-bottom p {
+    color: rgb(62, 62, 62);
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icons>div {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 2px solid;
+    padding: 2%;
+    border-radius: 50%;
+}
+
+.footer-bottom>div {
+    width: 30%;
+}
+
+.quickmenu {
+    cursor: pointer;
+}
+
+.quickmenu:hover {
+    width: 70px;
+    color: black;
+    border-bottom: 2px solid;
+}
+.location>p{
+    cursor: pointer;
+}
+.location>p:hover{
+    color:black;
+}
+
