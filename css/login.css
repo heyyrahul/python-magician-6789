@@ -26,17 +26,34 @@ body{
     scale: 2; 
 }
 .backpic{
-    height: 500px;
+    /* height: 500px;
     width: 500px;
     z-index: 10;
     position: absolute;
     left: 70px;
-    top: 18%;
+    top: 18%; */
+    height: 500px;
+    width: 500px;
+    z-index: -10;
+    position: absolute;
+    left: 2%;
 }
 .backpic img{
     height: 100%;
     width: 100%;
     
+}
+@media (max-width: 900px) {
+    .backpic {
+        display: none;
+    }
+    .container{
+        margin-right: 70%;
+    }
+    .navbar{
+        background-color: #7FC1B1;
+    }
+  
 }
 .container{
     background-color:white;
@@ -171,8 +188,12 @@ body{
     margin: 0 3px;
     width: 40px;
     height: 40px;
+    transition: transform 0.1s ease;
 }
-
+.social-icons a:hover{
+    transform: scale(1.09);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 .toggle-container{
     position: absolute;
     top: 0;
@@ -354,3 +375,24 @@ body{
     transform: scale(1.05);
     box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
 }
+.myCustomAlert {
+    display: none;
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #bbf9db;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 10000;
+    width: 50%;
+    text-align: center;
+}
+.myCustomAlert>p{
+    font-size: larger;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
