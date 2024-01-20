@@ -5,15 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SyLoan</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
     <!---------------------- Navbar ----------------------->
     <nav class="navbar">
-        <div class="logobox">
-            <span class="logo-gradient-text logotxt">SyLoan</span>
-        </div>
+        <span class="logo-gradient-text logotxt">SyLoan</span>
         <div class="menues">
             <a class="menu" href="product.html">Product</a>
             <a class="menu" href="company.html">Company</a>
@@ -83,9 +82,9 @@
                 <img src="./images/how-it-works.jpg" alt="" />
             </div>
             <div class="steps-left">
-                <div>
-                    <div class="steps-circle">
-                        <h3>1</h3>
+                <div class="step" data-step="1">
+                    <div class="steps-circle active">
+                        <h2>1</h2>
                     </div>
                     <div>
                         <h2 class="steps-heading">
@@ -97,9 +96,9 @@
                         </p>
                     </div>
                 </div>
-                <div>
+                <div class="step" data-step="2">
                     <div class="steps-circle">
-                        <h3>2</h3>
+                        <h2>2</h2>
                     </div>
                     <div>
                         <h2>Compare The Offer You Choose on Platform</h2>
@@ -109,9 +108,9 @@
                         </p>
                     </div>
                 </div>
-                <div>
+                <div class="step" data-step="3">
                     <div class="steps-circle">
-                        <h3>3</h3>
+                        <h2>3</h2>
                     </div>
                     <div>
                         <h2>Choose The Best Offer That You Need</h2>
@@ -134,15 +133,13 @@
         <p class="section-subheading">We're on a mission to transform how businesses pay for large invoices,<br>from
             SaaS and cloud to professional and marketing expenses.</p>
         <div class="service">
-            <div>
+            <div class="active">
                 <h2>
                     <i class="fa-solid fa-star-of-life"></i>
                     Pay For You
                 </h2>
                 <p>
-                    It takes 2 min. to complete the application, and you will
-                    immediately receive offers from the first banks, so you can quickly
-                    choose the best offer.
+                    Quickly secure the funds you need with our 2-minute application process, receiving immediate offers from top banks for you to choose from.
                 </p>
             </div>
             <div>
@@ -151,9 +148,7 @@
                     Take Control
                 </h2>
                 <p>
-                    It takes 2 min. to complete the application, and you will
-                    immediately receive offers from the first banks, so you can quickly
-                    choose the best offer.
+                    Empower yourself financially in just 2 minutes, receiving personalized offers from leading banks and taking control of your financial decisions.
                 </p>
             </div>
             <div>
@@ -162,9 +157,7 @@
                     Spend On Growth
                 </h2>
                 <p>
-                    It takes 2 min. to complete the application, and you will
-                    immediately receive offers from the first banks, so you can quickly
-                    choose the best offer.
+                    Invest in your growth effortlessly by completing our 2-minute application and quickly choosing the best offer from top banks.
                 </p>
             </div>
             <div>
@@ -173,9 +166,7 @@
                     Easy Loan
                 </h2>
                 <p>
-                    It takes 2 min. to complete the application, and you will
-                    immediately receive offers from the first banks, so you can quickly
-                    choose the best offer.
+                    Simplify your loan experience with our easy 2-minute application process, receiving immediate offers from premier banks to choose from effortlessly.
                 </p>
             </div>
         </div>
@@ -191,19 +182,144 @@
             <div class="leftbox feature-box">
                 <div class="overlay">
                     <h2>Consolidation Loan</h2>
-                <h1 style="font-size: 40px;">Save Your Money <br> On Your Loan</h1>
-                <p style="line-height: 25px;">By consolidating multiple debts into one, borrowers only need to make a single monthly payment instead of managing multiple payments to different creditors. This can make budgeting and financial management more straightforward.
-                </p>
-                <button class="getStartedBtn">Get Started</button>
+                    <h1 style="font-size: 40px;">Save Your Money <br> On Your Loan</h1>
+                    <p style="line-height: 25px;">By consolidating multiple debts into one, borrowers only need to make
+                        a single monthly payment instead of managing multiple payments to different creditors. This can
+                        make budgeting and financial management more straightforward.
+                    </p>
+                    <button class="getStartedBtn">Get Started</button>
                 </div>
             </div>
             <div class="rightbox feature-box">
-                    <h2>New Loan</h2>
+                <h2>New Loan</h2>
                 <h1 style="font-size: 40px;">Compare and <br> Choose Correctly</h1>
                 <p>Learn More</p>
             </div>
         </div>
     </section>
+
+    <!------------------- Testimonial ---------------------->
+    <section>
+        <p class="section-title">Testimonial</p>
+        <h1 class="heading">
+            What Our Loyal <br><span class="gradient-text">Customer Saying</span>
+        </h1>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div class="card-image">
+                        <img src="images/user1.jpg" alt="">
+                    </div>
+                    <div class="card-content">
+                        <p class="username">Alice Smith</p>
+                        <p class="designation">Marketing Manager</p>
+                        <div>⭐⭐⭐⭐⭐</div>
+                        <q class="card-text">Excellent service! The loan application process was quick and hassle-free. I got competitive rates, and the team was very supportive throughout. Highly recommended!</q>
+                    </div>
+                </div>                
+                <div class="card swiper-slide">
+                    <div class="card-image">
+                        <img src="images/user2.png" alt="">
+                    </div>
+                    <div class="card-content">
+                        <p class="username">Michael Johnson</p>
+                        <p class="designation">Software Engineer</p>
+                        <div>⭐⭐⭐⭐</div>
+                        <q class="card-text">Smooth loan process with reasonable terms. The online portal made it easy to manage repayments. Overall, a positive experience!</q>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="card-image">
+                        <img src="images/user3.jpg" alt="">
+                    </div>
+                    <div class="card-content">
+                        <p class="username">John Doe</p>
+                        <p class="designation">Financial Analyst</p>
+                        <div>⭐⭐⭐⭐⭐</div>
+                        <q class="card-text">Fantastic loan experience! The application process was smooth, and I received approval quickly. The interest rates were competitive, and the customer service was top-notch.</q>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="card-image">
+                        <img src="images/user4.png" alt="">
+                    </div>
+                    <div class="card-content">
+                        <p class="username">Mary Martin</p>
+                        <p class="designation">Project Manager</p>
+                        <div>⭐⭐⭐⭐⭐</div>
+                        <q class="card-text">"Overall, a positive experience. The loan officers were helpful and guided me through the process. The terms were reasonable, and I appreciated the flexibility."</q>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="card-image">
+                        <img src="images/user5.jpg" alt="">
+                    </div>
+                    <div class="card-content">
+                        <p class="username">Emily Lewis</p>
+                        <p class="designation">Graphic Designer</p>
+                        <div>⭐⭐⭐⭐</div>
+                        <q class="card-text">Exceptional service! The team went above and beyond to ensure I understood all aspects of the loan. Will definitely use their services again.</q>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="card-image">
+                        <img src="images/user6.png" alt="">
+                    </div>
+                    <div class="card-content">
+                        <p class="username">Carlos Harries </p>
+                        <p class="designation">Accountant</p>
+                        <div>⭐⭐⭐⭐</div>
+                        <q class="card-text">Mixed feelings about the loan process. The interest rates were higher than expected, and there were hidden fees that weren't initially clear. Make sure to read the fine print carefully.</q>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="card-image">
+                        <img src="images/user8.png" alt="">
+                    </div>
+                    <div class="card-content">
+                        <p class="username">David Walker </p>
+                        <p class="designation">Software Engineer</p>
+                        <div>⭐⭐⭐⭐</div>
+                        <q class="card-text">Smooth and efficient loan process! The team was responsive to my queries, and the rates were reasonable. I would recommend this company to anyone in need of financial assistance.</q>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="card-image">
+                        <img src="images/user9.png" alt="">
+                    </div>
+                    <div class="card-content">
+                        <p class="username">Olivia Martin</p>
+                        <p class="designation">Accountant</p>
+                        <div>⭐⭐⭐</div>
+                        <q class="card-text">Average experience with the loan application. The interest rates were competitive, but the documentation process could have been clearer. Decent, but room for improvement.</q>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="card-image">
+                        <img src="images/user10.png" alt="">
+                    </div>
+                    <div class="card-content">
+                        <p class="username">Sophia Green</p>
+                        <p class="designation">Software Engineer</p>
+                        <div>⭐⭐⭐⭐⭐</div>
+                        <q class="card-text">Applied for a loan and was pleasantly surprised by the quick approval. The online platform made managing payments easy. Overall, a good experience.</q>
+                    </div>                
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-------------------- Our branches ---------------------->
+    <div class="branches">
+        <p class="section-title">
+            Our Branches
+        </p>
+        <h1 class="heading">
+            <span class="gradient-text">Visit Us </span>and Get Your <br> Business Growth
+        </h1>
+        <p class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12069611.282264754!2d35.286184!3d68.329072!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa771c81963801ee5%3A0x6b82cf9d7cd491f6!2sSYLOA%20Ltd!5e0!3m2!1sen!2sin!4v1705739319829!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+    </div>
 
     <!----------------------- footer ------------------------->
     <footer class="footer">
@@ -232,30 +348,54 @@
                     <div>
                         <i class="fa-brands fa-xl fa-twitter"></i>
                     </div>
+                    <div>
+                        <i class="fa-brands fa-xl fa-youtube"></i>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-xl fa-linkedin-in"></i>
+                    </div>
                 </div>
             </div>
-            <div>
+            <div class="quickmenues">
                 <h2 class="Footerheading">Quick Menu</h2>
-                <p><a class="quickmenu" href="adminlogin.html" style="text-decoration: none; color: rgb(62, 62, 62);
-                    ;">Admin Login</a></p>
-                <p class="quickmenu">Product</p>
-                <p class="quickmenu">Company</p>
-                <p class="quickmenu">Support</p>
+                <div>
+                    <div>
+                        <p><a class="quickmenu" href="adminlogin.html">Admin Login</a></p>
+                        <p><a class="quickmenu" href="product.html">Product</a></p>
+                        <p><a class="quickmenu" href="company.html">Company</a></p>
+                        <p><a class="quickmenu" href="support.html">Support</a></p>
+                    </div>
+                    <div>
+                        <p><a class="quickmenu" href="#">Help</a></p>
+                        <p><a class="quickmenu" href="#">Privacy Policy</a></p>
+                    </div>
+                </div>
             </div>
             <div class="location">
                 <p>
                     <i class="fa-solid fa-xl fa-location-dot" style="margin-right: 10px;"></i>
-                    8502 Preston Rd. Inglewood, Maine 98380, USA
+                    8502 Preston Rd. Manchester, Maine 98380, UK
                 </p>
                 <p>
                     <i class="fa-solid fa-xl fa-envelope" style="margin-right: 10px;"></i> info@syloan.co
                 </p>
+                <p>
+                    <i class="fa-solid fa-xl fa-phone" style="margin-right: 10px;"></i>
+                    +44 (0)20 7123 4567
+                </p>
             </div>
         </div>
+        <p class="copyright">
+            ©Copyright 2023. All rights reserved.
+        <p>
     </footer>
-
+    
     <!---------------------- Scripts ----------------------->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="Script/index.js"></script>
     <script src="https://kit.fontawesome.com/a88c1550a0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+   
 </body>
 
 </html>
