@@ -3,8 +3,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  gap: 10px;
-  padding: 0% 5% 0% 2%; 
+  gap: 50px;
+  /* padding: 0% 5% 0% 2%;  */
+  width: 90%;
+  margin: auto;
 }
 
 @media all and (max-width: 600px) {
@@ -25,7 +27,9 @@ h2,h1 {
   color: #333;
 }
 
-
+.forms{
+  width: 50%;
+}
 .forms>form {
   max-width: 800px;
   margin: 20px auto;
@@ -34,6 +38,14 @@ h2,h1 {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+@media all and (max-width: 600px) {
+  .forms>form {
+    padding: 10px;
+    width: 100%;
+  }
+}  
+
+
 
 label {
   display: block;
@@ -62,7 +74,7 @@ button:hover {
 }
 .loan-calculator {
     font-family: "Roboto", sans-serif;
-    width: 600px;
+    width: 50%;
     margin: 24px auto;
     background: #fff;
     box-shadow: 0 12px 50px -11px rgba(0, 0, 0, 0.2);
