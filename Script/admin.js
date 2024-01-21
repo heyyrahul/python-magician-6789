@@ -1,3 +1,12 @@
+let applications = document.getElementById("applicationDetails");
+let userDetails = document.getElementById("userDetails");
+
+userDetails.addEventListener("click", () => {
+    fetchDataAndDisplay()
+})
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const loggedInAdmin = getLoggedInAdmin();
 
@@ -40,7 +49,13 @@ function showAdminPage() {
 //------------------------------------------
 
 document.addEventListener('DOMContentLoaded', () => {
-    fetchDataAndDisplay();
+    fetch('https://kushagrapathak-mock-api-server.onrender.com/users')
+    .then(response => response.json())
+    .then(data => {
+        displayTotalAmounts(data);
+        displayPagination(data);
+        displayPieChart(data);
+    })
 });
 
 const itemsPerPage = 6;
