@@ -179,3 +179,22 @@ body {
     display: flex;
     justify-content: space-between;
 }
+#getDetails{
+    height: 50px;
+    padding-left: 5%;
+}
+#getDetails>button{
+padding: 0.5%;
+cursor: pointer;
+background-color: #2e97d0;
+border-radius: 7px;
+transition: transform 0.3s ease;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 700;
+margin-left: 20px;
+color: white;
+}
+#getDetails>button:hover{
+    color: #000;
+   transform: scale(1.07);
+}
