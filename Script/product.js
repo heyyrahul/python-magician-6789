@@ -11,7 +11,7 @@ const calculateBtn = document.querySelector(".calculate-btn");
 let loanAmount = parseFloat(loanAmountInput.value);
 let interestRate = parseFloat(interestRateInput.value);
 let loanTenure = parseFloat(loanTenureInput.value);
-let applybutton = document.getElementById('applybutton');
+let applybutton = document.getElementById("applybutton");
 
 let interest = interestRate / 100 / 12;
 
@@ -42,6 +42,9 @@ const checkValues = () => {
   }
 };
 
+function validateAmount(input) {
+  input.value = input.value.replace(/[^0-9]/g, '');
+}
 const displayChart = (totalInterestPayableValue) => {
   const ctx = document.getElementById("myChart").getContext("2d");
   myChart = new Chart(ctx, {
@@ -162,5 +165,21 @@ async function getProducts() {
   }
 }
 
-applybutton.addEventListener("click", getProducts);
+async function getApplication(){
+  try{
+    await getProducts();
+    // console.log(appform);
+    // window.location.href = "./Thankyou.html";
+  }catch(error){
+    console.log(error);
+  }
+}
+applybutton.addEventListener("click", ()=>{
+  getApplication();
+  });
+  
+ 
+
+
+
 
