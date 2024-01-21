@@ -3,7 +3,9 @@ let loginBtn = document.getElementById('login');
 registerBtn.addEventListener('click', () => {
     container.classList.add("active");
 });
-
+document.getElementById("mainlogo").addEventListener("click", () => {
+    window.location.href = "/index.html";
+})
 loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });

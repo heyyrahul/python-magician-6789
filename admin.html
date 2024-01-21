@@ -8,19 +8,27 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <!---------------------- Navbar ----------------------->
-  <nav class="navbar">
-    <div class="logobox">
-        <a href="index.html" style="text-decoration: none;"><span class="logo-gradient-text logotxt">SyLoan</span></a>
-    </div>
+ <!---------------------- Navbar ----------------------->
+ <nav class="navbar">
+    <span class="logo-gradient-text logotxt" id="logocontainer">SyLoan</span>
     <div class="menues">
         <a class="menu" href="product.html">Product</a>
         <a class="menu" href="company.html">Company</a>
         <a class="menu" href="support.html">Support</a>
-        <a class="menu" href="adminlogin.html" style="color: black;font-weight: 700;">Sign Out</a>
     </div>
-    
+    <div style="display: flex; box-sizing: border-box;">
+        <button class="Signoutbtn" id="Signoutbtn">Sign-Out</button>
+        <button class="hamburger-btn"><i class="fa-solid fa-bars"></i></button>
+    </div>
+
 </nav>
+
+
+
+
+
+
+
     <div id="adminPage" >
         <h1 id="adminName">Hello Admin</h1>
      
@@ -43,6 +51,25 @@
         <button id="userDetails">All Time Customers Details</button>
     </div>
    <hr>
+   
+    <!-- Applications -->
+    <div class="applications" id="applications">
+        <table id="applicationsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Loan Amount</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    
+
     <div id="customerDetails" class="customer-cards"></div>
     
     <!-- <img src="images/admin2.jpg" alt="" id="secondimg">-- --->
