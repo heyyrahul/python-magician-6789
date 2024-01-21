@@ -10,15 +10,16 @@
     
     <!-- ------------------------Kushagra---------------------------->
     <nav class="navbar">
-      <div class="logobox">
-          <span class="logo-gradient-text logotxt">SyLoan</span>
-      </div>
+      <span class="logo-gradient-text logotxt">SyLoan</span>
       <div class="menues">
           <a class="menu" href="product.html">Product</a>
           <a class="menu" href="company.html">Company</a>
           <a class="menu" href="support.html">Support</a>
       </div>
-      <button class="loginbtn">Login</button>
+      <div style="display: flex; box-sizing: border-box;">
+          <button class="loginbtn">Login</button>
+          <button class="hamburger-btn"><i class="fa-solid fa-bars"></i></button>
+      </div>
 
   </nav>
     <div class="container">
@@ -72,32 +73,35 @@
   
       <div class="forms">
          <form action="Thankyou.html" method="GET" class="newform">
-  
-          <h1>Application Form</h1>
+          
+          <div id="application-header">
+            <h1>Application Form</h1>
+          </div>
+          <div id ="body">
           <!-- Name -->
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required><br>
+          <label for="name" >Name:</label>
+          <input type="text" id="name" name="name" required placeholder="Enter Name"><br>
   
           <!-- Email -->
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required><br>
+          <input type="email" id="email" name="email"  placeholder="Enter Email" required><br>
   
            <!-- Phone Number -->
-           <label for="phone">Phone Number:</label>
-           <input type="tel" id="phone" name="phone" required><br>
+           <label for="phone" oninput="validateAmount(this)">Phone Number:</label>
+           <input type="tel" id="phone" name="phone"  placeholder="Enter Phone" required><br>
    
   
           <div class="address">
             <!-- City -->
             <div>
               <label for="city">City:</label>
-            <input type="text" id="city" name="city" required><br>
+            <input type="text" id="city" name="city"  placeholder="Enter City" required><br>
   
             </div>
             <!-- State -->
             <div>
               <label for="state">State:</label>
-            <input type="text" id="state" name="state" required><br>
+            <input type="text" id="state" name="state"  placeholder="Enter State" required><br>
             </div>
           </div>
   
@@ -105,32 +109,36 @@
   
             <!-- Aadhar Number -->
             <div>
-              <label for="aadhar">Aadhar Number:</label>
-            <input type="text" id="aadhar" name="aadhar" required><br>
+              <label for="aadhar" oninput="validateAmount(this)">Aadhar Number:</label>
+            <input type="text" id="aadhar" name="aadhar"  placeholder="Enter Aadhar" required><br>
             </div>
   
             <!-- PAN Number -->
             <div>
               <label for="pan">PAN Number:</label>
-            <input type="text" id="pan" name="pan" required><br>
+            <input type="text" id="pan" name="pan"  placeholder="Enter Pan" required><br>
             </div>
           </div>
   
           <!-- Loan Amount -->
           <label for="loanAmount">Loan Amount:</label>
-          <input type="number" id="loanAmount" name="loanAmount" required><br>
+          <input type="number" id="loanAmount" name="loanAmount"  placeholder="Select Amount" required><br>
   
           <!-- Apply Button -->
           <div class="apply" >
             <button id = "applybutton" type="submit" class="applybtn">Apply</button>
           </div>
+        </div>
         </form>
       </div>
   
     </div>
    
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
-    <!-- <script src = "index.js"></script> -->
+    
+
+
+    <!-- -----------------------------footer------------------------------>
     <footer class="footer">
       <div class="footer-top">
           <h1>
@@ -157,28 +165,55 @@
                   <div>
                       <i class="fa-brands fa-xl fa-twitter"></i>
                   </div>
+                  <div>
+                      <i class="fa-brands fa-xl fa-youtube"></i>
+                  </div>
+                  <div>
+                      <i class="fa-brands fa-xl fa-linkedin-in"></i>
+                  </div>
               </div>
           </div>
-          <div>
+          <div class="quickmenues">
               <h2 class="Footerheading">Quick Menu</h2>
-              <p><a class="quickmenu" href="adminlogin.html" style="text-decoration: none; color: rgb(62, 62, 62);
-                  ;">Admin Login</a></p>
-              <p class="quickmenu">Product</p>
-              <p class="quickmenu">Company</p>
-              <p class="quickmenu">Support</p>
+              <div>
+                  <div>
+                      <p><a class="quickmenu" href="adminlogin.html">Admin Login</a></p>
+                      <p><a class="quickmenu" href="product.html">Product</a></p>
+                      <p><a class="quickmenu" href="company.html">Company</a></p>
+                      <p><a class="quickmenu" href="support.html">Support</a></p>
+                  </div>
+                  <div>
+                      <p><a class="quickmenu" href="#">Help</a></p>
+                      <p><a class="quickmenu" href="#">Privacy Policy</a></p>
+                  </div>
+              </div>
           </div>
           <div class="location">
               <p>
                   <i class="fa-solid fa-xl fa-location-dot" style="margin-right: 10px;"></i>
-                  8502 Preston Rd. Inglewood, Maine 98380, USA
+                  8502 Preston Rd. Manchester, Maine 98380, UK
               </p>
               <p>
                   <i class="fa-solid fa-xl fa-envelope" style="margin-right: 10px;"></i> info@syloan.co
               </p>
+              <p>
+                  <i class="fa-solid fa-xl fa-phone" style="margin-right: 10px;"></i>
+                  +44 (0)20 7123 4567
+              </p>
           </div>
       </div>
+      <p class="copyright">
+          ©Copyright 2023. All rights reserved.
+      <p>
   </footer>
-  <script src="Script/product.js"></script>
+  
+  <!---------------------- Scripts ----------------------->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="Script/index.js"></script>
+  <script src="https://kit.fontawesome.com/a88c1550a0.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src ="Script/product.js"></script>
+ 
 </body>
 </html>
 
