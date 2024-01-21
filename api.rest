@@ -1,1 +1,48 @@
 GET https://kushagrapathak-mock-api-server.onrender.com/users
+### 
+POST https://kushagrapathak-mock-api-server.onrender.com/loanform
+Content-Type: application/json
+
+{
+    "name": "bansal",
+    "phonenumber": 1234567890,
+    "email": "naman@gmail.com",
+    "city": "noida",
+    "state": "uttarpradesh",
+    "aadharnumber": 123456789012,
+    "pannumber": 1234567890,
+    "loanamount": 100000
+  }
+
+  ###
+
+POST http://localhost:3000/loanform
+Content-Type: application/json
+
+{
+    "name": "naman bansal",
+    "phonenumber": 1234567890,
+    "email": "naman@gmail.com",
+    "city": "noida",
+    "state": "uttarpradesh",
+    "aadharnumber": 123456789012,
+    "pannumber": 1234567890,
+    "loanamount": 100000
+  }
+
+###
+
+POST http://localhost:3000/loanform
+Content-Type: application/json
+
+{
+    
+    "name": "Userssss",
+    "phonenumber": 1234567890,
+    "email": "naman@gmail.com",
+    "city": "noida",
+    "state": "uttarpradesh",
+    "aadharnumber": 123456789012,
+    "pannumber": 1234567890,
+    "loanamount": 100000
+  }

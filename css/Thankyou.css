@@ -115,11 +115,13 @@
   color: #ffffff;
   display: block;
   text-decoration: none;
-  width: 250px;
+  width: 180px;
+  height: 30px;
   background: #7ab8af;
-  margin: 10px auto 0px;
-  padding: 15px 20px 15px;
+  margin: 50px auto 0px;
+  padding: 15px 20px 20px;
   border-bottom: 5px solid;
+  border-radius: 10px;
 }
 .thankyou-wrapper a:hover {
   font: 26px Arial, Helvetica, sans-serif;
@@ -127,11 +129,9 @@
   color: #ffffff;
   display: block;
   text-decoration: none;
-  width: 250px;
-  background: #0e2925;
-  margin: 10px auto 0px;
-  padding: 15px 20px 15px;
-  border-bottom: 5px solid #0e2925;
+  background: rgb(217, 79, 4);
+  padding: 15px 20px 20px;
+ 
 }
 * {
   padding: 0;
@@ -220,8 +220,11 @@ svg {
     }
   }
   .thankyou-wrapper{
-    height: 400px;
-    width: 400px;
+    height: 450px;
+    width: 450px;
     border: 1px solid black;
     margin-top: 1%;
+  }
+  #home{
+    color: black;
   }
