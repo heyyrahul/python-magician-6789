@@ -1,20 +1,5 @@
-// Catch the Signup elements
-let inptsignUpName = document.getElementById("signUpName");
-let inptsignUpEmail = document.getElementById("signUpEmail");
-let inptsignUpPassword = document.getElementById("signUpPassword");
-let signup = document.getElementById("signup");
-
-// Catch the SignIn elements
-let inpsignInEmail = document.getElementById("signInEmail");
-let inpsignInPassword = document.getElementById("signInPassword");
-let signIn = document.getElementById("signIn");
-
-// Rest
-let container = document.getElementById('container');
 let registerBtn = document.getElementById('register');
 let loginBtn = document.getElementById('login');
-
-// Event handlers
 registerBtn.addEventListener('click', () => {
     container.classList.add("active");
 });
@@ -23,87 +8,83 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
-signup.addEventListener("click", async (e) => {
-    e.preventDefault();
+function openCustomAlert() {
+    var customAlert = document.getElementById("customAlert");
+    customAlert.style.display = "block";
+}
 
-    // Check if all fields are filled
-    if (!inptsignUpName.value || !inptsignUpEmail.value || !inptsignUpPassword.value) {
-        alert("Please fill in all the fields.");
-        return;
+document.addEventListener("DOMContentLoaded", function () {
+    const signInForm = document.querySelector(".form-container.sign-in form");
+    const signUpForm = document.querySelector(".form-container.sign-up form");
+    
+    // Function to handle sign in
+    async function signIn(email, password) {
+  
+        try {
+            const response = await fetch("https://kushagrapathak-mock-api-server.onrender.com/users");
+            const users = await response.json();
+
+            const user = users.find(u => u.email === email && u.password === password);
+
+            if (user) {
+                // alert("Sign in successful!");
+                // alert.class="custom-alert "
+                openCustomAlert()
+                setTimeout(() => {
+                    window.location.href = "/index.html";
+                },1)
+            } else {
+                alert("Invalid email or password. Please try again.");
+            }
+        } catch (error) {
+            console.error("Error fetching user data:", error);
+        }
     }
 
-    // Check if the email already exists
-    const existingUser = await checkExistingUser(inptsignUpEmail.value);
+    // Function to handle sign up
+    async function signUp(name, email, password) {
+        try {
+            const response = await fetch("https://kushagrapathak-mock-api-server.onrender.com/users");
+            const users = await response.json();
 
-    if (existingUser) {
-        alert("Email already registered, please use a different email.");
-    } else {
-        signUp();
+            const existingUser = users.find(u => u.email === email);
+
+            if (existingUser) {
+                alert("Email already exists. Please use a different email.");
+            } else {
+                alert("Sign up successful!");
+            }
+        } catch (error) {
+            console.error("Error fetching user data:", error);
+        }
     }
+
+    // Event listener for sign in form
+    signInForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const signInEmail = document.getElementById("signInEmail").value;
+        const signInPassword = document.getElementById("signInPassword").value;
+
+        if (signInEmail && signInPassword) {
+            signIn(signInEmail, signInPassword);
+        } else {
+            alert("Please fill in all fields for sign in.");
+        }
+    });
+
+    // Event listener for sign up form
+    signUpForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const signUpName = document.getElementById("signUpName").value;
+        const signUpEmail = document.getElementById("signUpEmail").value;
+        const signUpPassword = document.getElementById("signUpPassword").value;
+
+        if (signUpName && signUpEmail && signUpPassword) {
+            signUp(signUpName, signUpEmail, signUpPassword);
+        } else {
+            alert("Please fill in all fields for sign up.");
+        }
+    });
 });
-
-async function checkExistingUser(email) {
-    try {
-        const response = await fetch('https://kushagrapathak-mock-api-server.onrender.com/users');
-        const users = await response.json();
-        return users.some(u => u.email === email);
-    } catch (error) {
-        console.error('Error checking existing user:', error);
-        return false;
-    }
-}
-
-async function signUp() {
-    let user = {
-        username: inptsignUpName.value,
-        email: inptsignUpEmail.value,
-        password: inptsignUpPassword.value
-    };
-
-    try {
-        const response = await fetch('https://kushagrapathak-mock-api-server.onrender.com/users', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(user),
-        });
-
-        if (response.ok) {
-            alert("Sign up successful!");
-        } else {
-            alert("Error during sign up. Please try again.");
-        }
-    } catch (error) {
-        console.error('Error during sign up:', error);
-    }
-}
-
-async function signInUser() {
-    // Check if all fields are filled
-    if (!inpsignInEmail.value || !inpsignInPassword.value) {
-        alert("Please fill in all the fields.");
-        return;
-    }
-
-    let signInCredentials = {
-        email: inpsignInEmail.value,
-        password: inpsignInPassword.value
-    };
-
-    try {
-        const response = await fetch('https://kushagrapathak-mock-api-server.onrender.com/users');
-        const users = await response.json();
-
-        const user = users.find(u => u.email === signInCredentials.email && u.password === signInCredentials.password);
-
-        if (user) {
-            alert("Login successful!");
-            window.location.href = '/home.html';
-        } else {
-            alert("Invalid email or password.");
-        }
-    } catch (error) {
-        console.error('Error during sign in:', error);
-    }
-}
