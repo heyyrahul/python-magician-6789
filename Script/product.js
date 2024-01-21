@@ -11,6 +11,7 @@ const calculateBtn = document.querySelector(".calculate-btn");
 let loanAmount = parseFloat(loanAmountInput.value);
 let interestRate = parseFloat(interestRateInput.value);
 let loanTenure = parseFloat(loanTenureInput.value);
+let applybutton = document.getElementById('applybutton');
 
 let interest = interestRate / 100 / 12;
 
@@ -116,18 +117,50 @@ const calculateAndUpdate = () => {
   updateData(emi);
 //   console.log('in calculateAndUpdate after update', emi);
 };
+const init = () => {
+  calculateAndUpdate();
+};
 
 document.addEventListener("DOMContentLoaded", function() {
     // Your existing code here
   
-    const init = () => {
-      calculateAndUpdate();
-    };
+   
   
     calculateBtn.addEventListener("click", calculateAndUpdate);
     init();
   });
-Z  
+
 
 calculateBtn.addEventListener("click", calculateAndUpdate);
 init();
+
+async function getProducts() {
+  try {
+    let data = {
+      "name": document.getElementById("name").value,
+      "phonenumber": document.getElementById("phone").value,
+      "email": document.getElementById("email").value,
+      "city": document.getElementById("city").value,
+      "state": document.getElementById("state").value,
+      "aadharnumber": document.getElementById("aadhar").value,
+      "pannumber": document.getElementById("pan").value,
+      "loanamount": document.getElementById("loanAmount").value
+    };
+
+    const response = await fetch("https://kushagrapathak-mock-api-server.onrender.com/loanform", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const products = await response.json();
+    console.log(products);
+  } catch (error) {
+    console.error("Error fetching product data:", error);
+  }
+}
+
+applybutton.addEventListener("click", getProducts);
+
