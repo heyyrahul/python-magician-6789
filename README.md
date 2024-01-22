@@ -1,7 +1,7 @@
 ## SyLoan
 SyLoan is a user-friendly and versatile online platform that provides a seamless experience for individuals seeking various types of loans. Whether you're pursuing higher education, planning a dream vacation, or dealing with unexpected expenses, SyLoan is here to assist you in achieving your financial goals.
  <br>
- [SyLoan live Demo](magenta-meringue-b52852.netlify.app/)
+ [SyLoan live Demo](frolicking-sopapillas-3d5b65.netlify.app/)
 
 
 ## Table of Contents
