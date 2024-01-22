@@ -55,31 +55,31 @@ SyLoan is a user-friendly and versatile online platform that provides a seamless
 
 ## Screenshots
 **HOME PAGE**
-
+![home](https://github.com/heyyrahul/python-magician-6789/assets/79692865/9cb54155-e55d-4202-8f02-b69a48e7b6c8)
 
 
 **LOGIN AND SIGN IN**
-
+![signIn](https://github.com/heyyrahul/python-magician-6789/assets/79692865/cb3bef7a-79bf-4edf-ba35-d7e7503dbdd4)
 
 
 
 **PRODUCT PAGE**
 
-
+![product](https://github.com/heyyrahul/python-magician-6789/assets/79692865/2eb0890f-1c19-45fc-a674-964df2978527)
 
 
 
 **ABOUT**
-
+![About](https://github.com/heyyrahul/python-magician-6789/assets/79692865/312e668b-561a-4a2f-bb9b-4f9805feafa2)
 
 
 **SUPPORT**
-
+![support](https://github.com/heyyrahul/python-magician-6789/assets/79692865/827e6044-574b-4e2d-bc45-0f382eda0e11)
 
 **ADMIN LOGIN**
-
+![adminlogin](https://github.com/heyyrahul/python-magician-6789/assets/79692865/3b1e8269-4e35-42a2-9898-db793a9c0199)
 **ADMIN PAGE**
-
+![admin](https://github.com/heyyrahul/python-magician-6789/assets/79692865/d89a69d9-3b2a-4e15-8a94-dbc79f351e9f)
 
 
 ## THANK YOU 🙏
