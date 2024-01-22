@@ -65,7 +65,7 @@ SyLoan is a user-friendly and versatile online platform that provides a seamless
 
 **PRODUCT PAGE**
 
-![product](https://github.com/heyyrahul/python-magician-6789/assets/79692865/2eb0890f-1c19-45fc-a674-964df2978527)
+![products](https://github.com/heyyrahul/vivid-roll-405/assets/79692865/d7835b0d-88d1-47d2-86ca-a5d53f1d7944)
 
 
 
@@ -80,7 +80,8 @@ SyLoan is a user-friendly and versatile online platform that provides a seamless
 ![adminlogin](https://github.com/heyyrahul/python-magician-6789/assets/79692865/3b1e8269-4e35-42a2-9898-db793a9c0199)
 **ADMIN PAGE**
 ![admin](https://github.com/heyyrahul/python-magician-6789/assets/79692865/d89a69d9-3b2a-4e15-8a94-dbc79f351e9f)
-
+**RESPONSIVENESS**
+![res](https://github.com/heyyrahul/vivid-roll-405/assets/79692865/cb99fa72-bdb1-4b88-86cd-cbdb04f8fea9)
 
 ## THANK YOU 🙏
 
