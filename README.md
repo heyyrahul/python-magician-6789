@@ -16,7 +16,7 @@ SyLoan is a user-friendly and versatile online platform that provides a seamless
 - **User Authentication:** Secure user authentication system to register and log in.
 - **Product :** One Stop Solution for Customer's desired Loans as per their demand.
 - **About:** Company's insight and Goals.
-- **Support Placement:** 24*7 Support from Team .
+- **Support:** 24*7 Support from Team .
 - **Responsive Design:** Ensure a smooth user experience across various devices.
 
 
@@ -39,7 +39,7 @@ SyLoan is a user-friendly and versatile online platform that provides a seamless
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/bigbasket.git
+   git clone https://github.com/your-username/python-magician-6789.git
    cd bigbasket
 2. Unzip the file if you've downloaded  it as a ZIP.
 3. Open the folder in your text editor.
