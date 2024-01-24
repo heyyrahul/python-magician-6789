@@ -478,6 +478,8 @@ header {
     margin-bottom: 30px;
     text-align: center;
     font-size: 1.1vw;
+    width: 80;
+    margin: auto;
 }
 .service {
     width: 80%;

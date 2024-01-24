@@ -11,29 +11,27 @@
       href="https://fonts.googleapis.com/css2?family=DM Sans:wght@400;500;700&display=swap"
     />
   </head>
-  <body style="background-color: white;">
-    <div class="navbar">
-      <div class="logobox">
-          <span class="logo-gradient-text logotxt">SyLoan</span>
-      </div>
+  <body>
+    <nav class="navbar5">
+      <span class="logo-gradient-text logotxt">SyLoan</span>
       <div class="menues">
           <a class="menu" href="product.html">Product</a>
           <a class="menu" href="company.html">Company</a>
           <a class="menu" href="support.html">Support</a>
       </div>
-      <button class="loginbtn">Login</button>
+      <div style="display: flex; box-sizing: border-box;">
+          <button class="loginbtn">Login</button>
+          <button class="hamburger-btn"><i class="fa-solid fa-bars"></i></button>
       </div>
+
+  </nav>
     <div class="about">
-      <div class="about-finance-flow-parent">
-        <h1 class="about-finance-flow">About Us</h1>
-        <div class="lorem-ipsum-dolor">
+        <h1 class="heading gradient-text" style="margin-top: 70px;">About Us</h1>
+        <div class="section-subheading " style="width: 800px; margin-top: -50px;">
           At SyLoan, we understand that financial needs can arise unexpectedly, and getting the right support is crucial. We are here to be your reliable partner, providing tailored loan solutions designed to meet your unique circumstances.
-        </div>
       </div>
       <section class="frame-group">
-        <div class="what-drives-finance-flow-parent">
-          <h1 class="what-drives-finance">What drives Finance Flow?</h1>
-        </div>
+          <h1 class="heading" style="font-size: 2.5vw; text-align: center; margin: auto; margin-bottom:10px; margin-top: -30px;" >What drives <span class="gradient-text">Finance Flow</span>?</h1>
         <div class="div1">
           <div class="div-parent">
             <div class="div2">
@@ -46,7 +44,7 @@
                 />
               </div>
               <div class="open-source-parent">
-                <b class="open-source">Loan analysis</b>
+                <b class="open-source">Loan Analysis</b>
                 <div class="lorem-ipsum-dolor2">
                   we understand that each loan application is unique. Our loan analysis process is thorough, transparent, and designed to empower borrowers with the financial solutions that best meet their needs.
                 </div>
@@ -62,7 +60,7 @@
                 />
               </div>
               <div class="worldwide-parent">
-                <b class="worldwide">User Metrics</b>
+                <b class="open-source">User Metrics</b>
                 <div class="lorem-ipsum-dolor2">
                   Number of loan applications are successfully approved and  Number of borrowers successfully complete their loan repayments reflecting our commitment to accessibility and inclusivity in lending.
                 </div>
@@ -78,7 +76,7 @@
                 />
               </div>
               <div class="worldwide-parent">
-                <b class="worldwide">Document Verification</b>
+                <b class="open-source">Document Verification</b>
                 <div class="lorem-ipsum-dolor2">
                   we prioritize transparency, security, and accuracy throughout the process. Our process is designed to protect both our borrowers and our organization, ensuring a seamless and trustworthy lending experience.
                 </div>
@@ -93,10 +91,10 @@
           <div class="frame-wrapper">
             <div class="frame-div">
               <div class="our-mission-parent">
-                <h1 class="our-mission">Our mission</h1>
+                <h1 class="heading gradient-text" style="font-size: 48px; margin-bottom: -10px;">Our mission</h1>
                 <div class="lorem-ipsum-dolor-container">
                   <span>
-                    <p class="lorem-ipsum-dolor6">
+                    <p>
                       Empowering financial freedom through accessible and responsible lending is at the core of our mission. We strive to make the lending process transparent, straightforward, and supportive, ensuring our clients have the resources they need to achieve their goals.
                     </p>
                     <p class="blank-line">&nbsp;</p>
@@ -104,10 +102,10 @@
                 </div>
               </div>
               <div class="our-story-parent">
-                <h1 class="our-story">Our story</h1>
+                <h1 class="heading gradient-text" style="font-size: 48px; margin-top: -80px; margin-bottom: -10px;">Our story</h1>
                 <div class="lorem-ipsum-dolor-container1">
                   <span>
-                    <p class="lorem-ipsum-dolor7">
+                    <p>
                       Trusted Lending Professionals Our team comprises seasoned professionals with extensive experience in the lending industry. We bring a wealth of knowledge to the table, allowing us to navigate the complexities of lending with expertise. Trust us to guide you through the loan process with clarity and professionalism. Customer-Centric Focus Our clients are our priority. We take a customer-centric approach to lending, understanding that each individual and business has unique financial needs. From first-time borrowers to seasoned entrepreneurs, we are committed to providing personalized solutions that suit your requirements.
                   </span>
                 </div>
@@ -115,7 +113,7 @@
             </div>
           </div>
           <div>
-          <img style="width: 800px; height: 600px;"
+          <img style="width: 700px; height: 500px; margin-top: 150px;"
             class="planet-icon"
             loading="eager"
             alt=""
@@ -125,36 +123,83 @@
         </div>
       </section>
       </section>
+      <h1 class="heading gradient-text" style="margin-top: -120px;">Our Team </h1>
+
+      <div class="ccontainer">
+        
+        <div class="card__container" style="width: 80%; margin: auto;">
+                     <article class="card__article">
+              <img src="images/rahul.jpg" alt="image" class="card__img">
+
+              <div class="card__data">
+                 <h2 class="card__title">Rahul Kumar</h2>
+                 <span class="card__description">Versatile coder with proficiency across the entire stack, from front-end to back-end development.</span>
+                
+                 <a href="https://www.linkedin.com/in/rahul-kamat-86702b17a/" class="card__button">Let's connect</a>
+              </div>
+           </article>
+
+           <article class="card__article">
+              <img src="images/kushagra.jpg" alt="image" class="card__img">
+
+              <div class="card__data">
+                 <h2 class="card__title">Kushagra Pathak</h2>
+                 <span class="card__description">Specializes in DevOps practices, streamlining the deployment and operation of large-scale applications.</span>
+               
+                 <a href="https://www.linkedin.com/in/kushagra-pathak-ab390a1b8/" class="card__button">Let's connect</a>
+              </div>
+           </article>
+
+           <article class="card__article">
+              <img src="images/pranoti.jpg" alt="image" class="card__img">
+
+              <div class="card__data">
+                 <h2 class="card__title">Pranoti Kadam</h2>
+                 <span class="card__description"> Passionate tech enthusiast, always eager to explore emerging technologies and frameworks.</span>
+                 <a href="https://www.linkedin.com/in/pranoti-kadam-2b52a7217/" class="card__button">Let's connect</a>
+              </div>
+           </article>
+
+           <article class="card__article">
+              <img src="images/naman.jpg" alt="image" class="card__img">
+
+              <div class="card__data">
+                 <h2 class="card__title">Namal Bansal</h2>
+                 <span class="card__description">Proficient in containerization and orchestration tools, optimizing the development-to-production lifecycle.</span>
+                 
+                 <a href="https://www.linkedin.com/in/naman-bansal-b52a8390/" class="card__button">Let's connect</a>
+              </div>
+           </article>
+        </div>
+     </div>
       <section class="frame-parent2">
         <div class="investors-parent">
-          <h1 class="investors">Investors</h1>
-          <div class="lorem-ipsum-dolor14">
+          <h1 class="investors gradient-text" style="margin-top: -50px;">Investors</h1>
+          <div class="section-subheading" style="width:88%; margin: auto; margin-top: 0px;">
             At SyLoan, we are proud to be backed by a diverse and esteemed group of investors who share our vision for financial empowerment and responsible lending. Their support fuels our mission to provide accessible and innovative loan solutions to individuals and businesses.
           </div>
         </div>
         <div class="investors-card">
-          <div class="investor"><img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt=""><p style="font-weight: 500; font-size: 17px; margin-top: 0px;">Vijay Shekhar Sharma</p><p style="font-weight: 300; color: rgb(180, 180, 180); font-size: 13px; margin: 0px 0px 0px 0px;">Founder & CEO</p><img style="margin-top: -45px;" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt=""></div>
+          <div class="investor"><img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt=""><p style="font-weight: 500; font-size: 17px; margin-top: 0px;">Vijay Shekhar Sharma</p><p style="font-weight: 300; color: rgb(180, 180, 180); font-size: 13px; margin: 0px 0px 0px 0px;">Founder & CEO</p><img style="margin-top: -70px;" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt=""></div>
 
-          <div class="investor"><img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png" alt=""><p style="font-weight: 500; font-size: 17px; margin-top: 0px;">Kunal Shah</p><p style="font-weight: 300; color: rgb(180, 180, 180); font-size: 13px; margin: 0px 0px 0px 0px;">Founder</p><img style="margin-top: 6px; height: auto;" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/cred_0a47d7b4f8.png" alt=""></div>
+          <div class="investor"><img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png" alt=""><p style="font-weight: 500; font-size: 17px; margin-top: 0px;">Kunal Shah</p><p style="font-weight: 300; color: rgb(180, 180, 180); font-size: 13px; margin: 0px 0px 0px 0px;">Founder</p><img style=" margin-top: -20px; height: auto;" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/cred_0a47d7b4f8.png" alt=""></div>
 
-          <div class="investor"><img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/amrish_rau_pine_labs_144e5e587c.jpg" alt=""><p style="font-weight: 500; font-size: 17px; margin-top: 0px;">Amrish Rau</p><p style="font-weight: 300; color: rgb(180, 180, 180); font-size: 13px; margin: 0px 0px 0px 0px;">CEO</p><img style="margin-top: 10px; height: auto;" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/pine_labs_0aa2407434.png" alt=""></div>
+          <div class="investor"><img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/amrish_rau_pine_labs_144e5e587c.jpg" alt=""><p style="font-weight: 500; font-size: 17px; margin-top: 0px;">Amrish Rau</p><p style="font-weight: 300; color: rgb(180, 180, 180); font-size: 13px; margin: 0px 0px 0px 0px;">CEO</p><img style=" margin-top: -10px; height: auto;" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/pine_labs_0aa2407434.png" alt=""></div>
 
-          <div class="investor"><img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Sampad_swain_Instamojo_f12bf6341e.jpg" alt=""><p style="font-weight: 500; font-size: 17px; margin-top: 0px;">Sampad Swain</p><p style="font-weight: 300; color: rgb(180, 180, 180); font-size: 13px; margin: 0px 0px 0px 0px;">Co-Founder & CEO</p><img style="margin-top: 5px; height: auto;" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/instamojo_8763e704f7.png" alt=""></div>
+          <div class="investor"><img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Sampad_swain_Instamojo_f12bf6341e.jpg" alt=""><p style="font-weight: 500; font-size: 17px; margin-top: 0px;">Sampad Swain</p><p style="font-weight: 300; color: rgb(180, 180, 180); font-size: 13px; margin: 0px 0px 0px 0px;">Co-Founder & CEO</p><img style="margin-top: -20px; height: auto;" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/instamojo_8763e704f7.png" alt=""></div>
         </div>
       </section>
-      <footer class="foot">
-        <div class="foot-top">
+      <footer class="footer">
+        <div class="footer-top">
             <h1>
                 Growww <span class="gradient-text">Your Business</span>, <br>Take Your Step with Us!
             </h1>
             <button class="contactusbtn">Contact us</button>
         </div>
         <hr />
-        <div class="foot-bottom">
+        <div class="footer-bottom">
             <div>
-                <div class="logobox">
-                    <span class="logo-gradient-text logotxt">SyLoan</span>
-                </div>
+                    <span class="logo-gradient-text logotxt" >SyLoan</span>
                 <p>
                     No matter how your customers want to pay, we can help you find the right
                 </p>
@@ -168,26 +213,46 @@
                     <div>
                         <i class="fa-brands fa-xl fa-twitter"></i>
                     </div>
+                    <div>
+                        <i class="fa-brands fa-xl fa-youtube"></i>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-xl fa-linkedin-in"></i>
+                    </div>
                 </div>
             </div>
-            <div>
-                <h2 class="Footheading">Quick Menu</h2>
-                <p><a class="quickmenu" href="adminlogin.html" style="text-decoration: none; color: rgb(62, 62, 62);
-                    ;">Admin Login</a></p>
-                <p class="quickmenu">Product</p>
-                <p class="quickmenu">Company</p>
-                <p class="quickmenu">Support</p>
+            <div class="quickmenues">
+                <h2 class="Footerheading" style="margin-bottom: 10px;">Quick Menu</h2>
+                <div>
+                    <div>
+                        <p><a class="quickmenu" href="adminlogin.html">Admin Login</a></p>
+                        <p><a class="quickmenu" href="product.html">Product</a></p>
+                        <p><a class="quickmenu" href="company.html">Company</a></p>
+                        <p><a class="quickmenu" href="support.html">Support</a></p>
+                    </div>
+                    <div>
+                        <p><a class="quickmenu" href="#">Help</a></p>
+                        <p><a class="quickmenu" href="#">Privacy Policy</a></p>
+                    </div>
+                </div>
             </div>
             <div class="location">
                 <p>
                     <i class="fa-solid fa-xl fa-location-dot" style="margin-right: 10px;"></i>
-                    8502 Preston Rd. Inglewood, Maine 98380, USA
+                    8502 Preston Rd. Manchester 98380, UK
                 </p>
                 <p>
                     <i class="fa-solid fa-xl fa-envelope" style="margin-right: 10px;"></i> info@syloan.co
                 </p>
+                <p>
+                    <i class="fa-solid fa-xl fa-phone" style="margin-right: 10px;"></i>
+                    +44 (0)20 7123 4567
+                </p>
             </div>
         </div>
+        <p class="copyright">
+            ©Copyright 2024. All rights reserved.
+        <p>
     </footer>
     <script src="https://kit.fontawesome.com/2f9c33e799.js" crossorigin="anonymous"></script>
   </body>

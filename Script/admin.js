@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const admins = [
     { username: "heyyrahul", password: "Rahul@9870", name: "Rahul" },
     { username: "kushpathak", password: "Kush@4563", name: "Kush" },
-    { username: "bansalnaman", password: "Bansal@6945", name: "Naman" },
+    { username: "bansalnaman", password: "Bansal@6969", name: "Naman" },
     { username: "kadampranoti", password: "kadam@pranoti", name: "Pranoti" }
 ];
 

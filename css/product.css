@@ -508,3 +508,105 @@ p{
   color:  rgb(62, 62, 62);
   text-align: end;
 }
+
+/* Additional Div ---------------------------------------------------------------*/
+*,*:after,*:before{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#types{
+	font-family: arial;
+	font-size: 16px;
+	margin-bottom:50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	
+}
+img{
+	max-width: 100%;
+}
+.ui-card{
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	width: 350px;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.3s ease-out;
+	background:radial-gradient(#111 50%, #000 100%);
+  height: 270px;
+  cursor: pointer;
+}
+
+.ui-card img{
+	transform: scale(1.3);
+	transition: all 0.3s ease-out;
+}
+.ui-card:hover img{
+	transform: scale(1.1) translateY(-20px); 
+	opacity: 0.3
+}
+.ui-card .description{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 15px;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+}
+.ui-card .description h3{
+	font-weight: 700;
+	font-size: 32px;
+	margin: 0 0 20px;
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all 0.3s ease-out;
+
+}
+.ui-card .description p{
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all 0.3s ease-out 0.2s;
+  
+}
+.ui-card .description a{
+	color: #fff;
+	/* background:#34aff3; */
+	display: inline-block;
+	padding: 10px 25px;
+	border-radius: 5px;
+	text-decoration: none;
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all 0.1s ease-out 0.2s;
+}
+.ui-card .description a:hover{
+	/* background:#0a83c5; */
+  color: rgb(241, 66, 43);
+}
+.ui-card:hover .description h3{
+	opacity: 1;
+	transform: translateY(0px);
+}
+.ui-card:hover .description p{
+	opacity: 1;
+	transform: translateY(0px);
+}
+.ui-card:hover .description a{
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+.loanhead{
+display: flex;;
+justify-content: center;
+align-items: center;
+margin-bottom: 1.5%;
+margin-top: -1.5%;
+background-color: #7FC1B1;
+height: 70px;
+}
