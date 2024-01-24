@@ -1,8 +1,5 @@
-let registerBtn = document.getElementById('register');
 let loginBtn = document.getElementById('login');
-registerBtn.addEventListener('click', () => {
-    container.classList.add("active");
-});
+
 document.getElementById("mainlogo").addEventListener("click", () => {
     window.location.href = "/index.html";
 })
@@ -17,11 +14,8 @@ function openCustomAlert() {
 
 document.addEventListener("DOMContentLoaded", function () {
     const signInForm = document.querySelector(".form-container.sign-in form");
-    const signUpForm = document.querySelector(".form-container.sign-up form");
-    
-    // Function to handle sign in
+
     async function signIn(email, password) {
-  
         try {
             const response = await fetch("https://kushagrapathak-mock-api-server.onrender.com/users");
             const users = await response.json();
@@ -29,12 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const user = users.find(u => u.email === email && u.password === password);
 
             if (user) {
-                // alert("Sign in successful!");
-                // alert.class="custom-alert "
-                openCustomAlert()
+                localStorage.setItem("loggedInUser", user.email);
+                openCustomAlert();
                 setTimeout(() => {
-                    window.location.href = "/index.html";
-                },1)
+                    window.location.href = "./index.html";
+                }, 1000);
             } else {
                 alert("Invalid email or password. Please try again.");
             }
@@ -43,25 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Function to handle sign up
-    async function signUp(name, email, password) {
-        try {
-            const response = await fetch("https://kushagrapathak-mock-api-server.onrender.com/users");
-            const users = await response.json();
-
-            const existingUser = users.find(u => u.email === email);
-
-            if (existingUser) {
-                alert("Email already exists. Please use a different email.");
-            } else {
-                alert("Sign up successful!");
-            }
-        } catch (error) {
-            console.error("Error fetching user data:", error);
-        }
-    }
-
-    // Event listener for sign in form
     signInForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
@@ -72,21 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
             signIn(signInEmail, signInPassword);
         } else {
             alert("Please fill in all fields for sign in.");
-        }
-    });
-
-    // Event listener for sign up form
-    signUpForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        const signUpName = document.getElementById("signUpName").value;
-        const signUpEmail = document.getElementById("signUpEmail").value;
-        const signUpPassword = document.getElementById("signUpPassword").value;
-
-        if (signUpName && signUpEmail && signUpPassword) {
-            signUp(signUpName, signUpEmail, signUpPassword);
-        } else {
-            alert("Please fill in all fields for sign up.");
         }
     });
 });

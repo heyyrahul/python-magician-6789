@@ -1,0 +1,179 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/************************** Navbar ******************************/
+
+.navbar {
+    max-width: 100%;
+    height: 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7FC1B1;
+    padding: 1.5% 5%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-gradient-text {
+    font-size: 2.5rem;
+    background: linear-gradient(45deg,
+            #e6fcf1,
+            #cbfee5,
+            #bbf9db,
+            #cbfee5,
+            #e6fcf1);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 1.5px 1.5px 2px #D5F8E7;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menues {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    text-decoration: none;
+    color: white;
+    margin: 0 25px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.menu:hover {
+    color: #D5F8E7;
+    border-bottom: 2px solid #D5F8E7;
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.gradient-text {
+    background: linear-gradient(45deg,
+            #98decd,
+            #71b4a4,
+            #57a693,
+            #71b4a4,
+            #98decd);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+#logoutBtn {
+    background: linear-gradient(90deg,
+            #e1fdef,
+            #d0f9e5,
+            #c9fce2,
+            #d0f9e5,
+            #e1fdef);
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.loginbtn:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+}
+
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+@media all and (max-width:750px){
+/* navbar */
+.logo-gradient-text {
+    font-size: 1.5rem;
+}
+.loginbtn{
+    font-size: 14px;
+    padding: 8px 15px;
+    border-radius: 8px;
+}
+.menu{
+    font-size: 1rem;
+    margin: 0 10px;
+}
+
+}
+@media only screen and (max-width: 500px) {
+    .navbar{
+        padding: 6% 5%;
+    }
+    .menues {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 68px;
+        right: 0; 
+        width: 40%;
+        background-color: #7FC1B1;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 99;
+    }
+    
+    .menu {
+        margin: 10px;
+        font-size: .9rem;
+    }
+    
+    .hamburger-btn {
+        display: block;
+    }
+
+    .loginbtn{
+        padding: -10px 5px;
+        font-size: 0.8rem;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+}
+
+
+.greeting{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.profile{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+#profileImage img{
+    width: 450px;
+    
+}
+#profileContent{
+    width: 40%;
+    margin: auto;
+    border: 3px solid #7FC1B1;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 30px;
+    background-color: #e9faf3;
+}
+
+h3{
+    display: inline-block;
+    margin: 5px;
+}
+
+table{
+    width: 100%;
+    line-height: 2px;
+}

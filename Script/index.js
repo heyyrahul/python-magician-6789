@@ -1,52 +1,34 @@
-var swiper = new Swiper('.mySwiper', {
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 1000,
-    autoplayHoverPause: true,
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 'auto',
-    initialSlide: 4,
-    coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 40,
-        modifier: 2,
-        slideShadows: false,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-    },
-});
-
 let loginbtn = document.querySelector(".loginbtn");
 loginbtn.addEventListener("click", () => {
-
     window.location.href = "login.html";
 });
 
-const steps = document.querySelectorAll('.step');
-    let currentStep = 1;
+// Check if the user is already logged in
+document.addEventListener("DOMContentLoaded", async function () {
+    try {
+        const response = await fetch("https://kushagrapathak-mock-api-server.onrender.com/users");
+        const users = await response.json();
+        const loggedInUser = localStorage.getItem("loggedInUser");
 
-    function setActiveStep(stepNumber) {
-        steps.forEach(s => s.classList.remove('active'));
-        steps[stepNumber - 1].classList.add('active');
+        if (loggedInUser) {
+            const user = users.find(u => u.email === loggedInUser);
+            if (user) {
+                const loginBtn = document.querySelector(".loginbtn");
+        
+                loginBtn.style.boxShadow = "none !important";
+                loginBtn.style.backgroundColor = "#7FC1B1 !important";
+                loginBtn.style.border = "none !important";
+        
+                loginBtn.innerHTML = `<i class="fas fa-user"></i>  ${user.username}`;
+                loginBtn.addEventListener("click", () => {
+                    window.location.href = "./profile.html";
+                });
+            }
+        }
+        
+        
+        
+    } catch (error) {
+        console.error("Error checking login status:", error);
     }
-
-    function autoChangeStep() {
-        setActiveStep(currentStep);
-        currentStep = (currentStep % steps.length) + 1;
-    }
-    setInterval(autoChangeStep, 3000);
-
-    const serviceItems = document.querySelectorAll('.service > div');
-    let currentServiceItem = 0;
-
-    function showNextServiceItem() {
-        serviceItems[currentServiceItem].classList.remove('active');
-        currentServiceItem = (currentServiceItem + 1) % serviceItems.length;
-        serviceItems[currentServiceItem].classList.add('active');
-    }
-    setInterval(showNextServiceItem, 3000);
-
+});
