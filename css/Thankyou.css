@@ -83,148 +83,78 @@
   box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
 }
 
-.thankyou-wrapper {
-  width: 100%;
-  height: auto;
-  margin: auto;
-  background: #ffffff;
-  padding: 10px 0px 50px;
+
+  /*-------cheching-------------*/
+
+  @import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap');
+html,body {
+    font-family: 'Raleway', sans-serif;  
 }
-.thankyou-wrapper img {
-  border: #7ab8af 10px solid;
-  border-radius: 5px;
+.thankyou-page ._header {
+    background: #7ab8af;
+    padding: 130px 30px;
+    text-align: center;
+    background: #5db7a9 url(https://codexcourier.com/images/main_page.jpg) center/cover no-repeat;
+}
+.thankyou-page ._header .logo {
+    max-width: 200px;
+    margin: 0 auto 50px;
+}
+.thankyou-page ._header .logo img {
+    width: 100%;
+}
+.thankyou-page ._header h1 {
+    font-size: 65px;
+    font-weight: 800;
+    color: white;
+    margin: -30px;
+}
+.thankyou-page ._body {
+    margin: -90px 0 30px;
+}
+.thankyou-page ._body ._box {
+    margin: auto;
+    max-width: 80%;
+    padding: 50px;
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0 0 35px rgba(10, 10, 10,0.12);
+    -moz-box-shadow: 0 0 35px rgba(10, 10, 10,0.12);
+    -webkit-box-shadow: 0 0 35px rgba(10, 10, 10,0.12);
+}
+.thankyou-page ._body ._box h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #0a8270e2;
+}
+.thankyou-page ._footer {
+    text-align: center;
+    padding: 0px 30px;
 }
 
-.thankyou-wrapper h1 {
-  font: Arial, Helvetica, sans-serif;
-  text-align: center;
-  color: #333333;
-  padding: 10px 10px;
-  /* border: 5px solid #7ab8af; */
-  /* border-radius: 60px; */
-}
-.thankyou-wrapper p {
-  font: 26px Arial, Helvetica, sans-serif;
-  text-align: center;
-  color: #333333;
-  padding: 5px 10px 5px;
-}
-.thankyou-wrapper a {
-  font: 26px Arial, Helvetica, sans-serif;
-  text-align: center;
-  color: #ffffff;
-  display: block;
-  text-decoration: none;
-  width: 180px;
-  height: 30px;
-  background: #7ab8af;
-  margin: 50px auto 0px;
-  padding: 15px 20px 20px;
-  border-bottom: 5px solid;
-  border-radius: 10px;
-}
-.thankyou-wrapper a:hover {
-  font: 26px Arial, Helvetica, sans-serif;
-  text-align: center;
-  color: #ffffff;
-  display: block;
-  text-decoration: none;
-  background: rgb(217, 79, 4);
-  padding: 15px 20px 20px;
- 
-}
-* {
-  padding: 0;
-  margin: 0;
-}
-.wrapper {
-  height: 50vh;
+.thankyou-page ._footer .btn {
+    background: #6fb8ad;
+    color: white;
+    border: 0;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 0;
+    letter-spacing: 0.8px;
+    padding: 20px 33px;
+    text-transform: uppercase;
+    
 
-  display: flex;
+}
+
+.thankyou-page ._footer .btn:hover{
+    background: #15675a;
+}
+._footer a{
+  color: #02978a;
+}
+#checkmark{
+  height: -8px;
+  width: auto;
   justify-content: center;
   align-items: center;
-  /* background-color: #eee; */
 }
-
-svg {
-    width: 100px;
-    display: block;
-    margin: 40px auto 0;
-  }
-  
-  .path {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 0;
-    &.circle {
-      -webkit-animation: dash .9s ease-in-out;
-      animation: dash .9s ease-in-out;
-    }
-    &.line {
-      stroke-dashoffset: 1000;
-      -webkit-animation: dash .9s .35s ease-in-out forwards;
-      animation: dash .9s .35s ease-in-out forwards;
-    }
-    &.check {
-      stroke-dashoffset: -100;
-      -webkit-animation: dash-check .9s .35s ease-in-out forwards;
-      animation: dash-check .9s .35s ease-in-out forwards;
-    }
-  }
-  
-  p {
-    text-align: center;
-    margin: 11px 0 42px;
-    font-size: 1.25em;
-    &.success {
-      color: #73AF55;
-    }
-    &.error {
-      color: #D06079;
-    }
-  }
-  
-  
-  @-webkit-keyframes dash {
-    0% {
-      stroke-dashoffset: 1000;
-    }
-    100% {
-      stroke-dashoffset: 0;
-    }
-  }
-  
-  @keyframes dash {
-    0% {
-      stroke-dashoffset: 1000;
-    }
-    100% {
-      stroke-dashoffset: 0;
-    }
-  }
-  
-  @-webkit-keyframes dash-check {
-    0% {
-      stroke-dashoffset: -100;
-    }
-    100% {
-      stroke-dashoffset: 900;
-    }
-  }
-  
-  @keyframes dash-check {
-    0% {
-      stroke-dashoffset: -100;
-    }
-    100% {
-      stroke-dashoffset: 900;
-    }
-  }
-  .thankyou-wrapper{
-    height: 450px;
-    width: 450px;
-    border: 1px solid black;
-    margin-top: 1%;
-  }
-  #home{
-    color: black;
-  }
