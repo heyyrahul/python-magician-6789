@@ -597,54 +597,16 @@ body {
  #applications{
 	display: none;
 }
-
-.application {
-	border: 1px solid #ccc;
-	border-radius: 8px;
-	padding: 15px;
-	margin-bottom: 20px;
-	/* background-color: #fff; */
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	cursor: pointer;
-}
-
-.application p {
-	margin: 8px 0;
-}
-
-.accept-button,
-.reject-button {
-	background-color: #4CAF50;
-	color: white;
-	padding: 10px;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	margin-right: 5px;
-}
-
-.reject-button {
-	background-color: #f44336;
-}
-
-.accept-button:hover,
-.reject-button:hover {
-	opacity: 0.8;
-}
-/* --------------------------- */
+/* UserDetails----------->>>>>>>>>>>> */
 table {
     border-collapse: collapse;
     border: 1px solid #1a9359; 
-    border-radius: 5%;
+    border-radius: 5%;/* Border style and width */
   }
 th, td {
-  
-    padding: 8px; 
+    border: 1px solid #1a9359; /* Border style and width */
+    padding: 8px; /* Optional: Add padding to cells */
   }
   #createbox>th{
     background-color:#28d280;
-}
-
-button{
-margin:0% 10%;
 }

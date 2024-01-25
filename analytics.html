@@ -6,9 +6,9 @@
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
-	<link rel="stylesheet" href="css/admin.css">
+	<link rel="stylesheet" href="css/analytic.css">
 
-	<title>Admin</title>
+	<title>Analytics</title>
 </head>
 <body>
 	
@@ -22,15 +22,15 @@
 			</div>
 		</a>
 		<ul class="side-menu top">
-			<li class="active">
-				<a href="#">
+			<li >
+				<a href="admin.html">
 					<i class='bx bxs-dashboard' ></i>
 					<span class="text">Dashboard</span>
 				</a>
 			</li>
 			
-			<li>
-				<a href="analytics.html">
+			<li class="active"> 
+				<a href="#">
 					<i class='bx bxs-doughnut-chart' ></i>
 					<span class="text">Analytics</span>
 				</a>
@@ -76,7 +76,7 @@
 			<form action="#">
 				<div class="form-input">
 					<input type="search" placeholder="Search...">
-					<button type="submit" class="search-btn"  style="margin: 0px;"><i class='bx bx-search' ></i></button>
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
 				</div>
 			</form>
 			<input type="checkbox" id="switch-mode" hidden>
@@ -94,22 +94,14 @@
 		<!-- MAIN -->
 		<main>
 			<div class="head-title">
-				<div class="left">
-					<h1>Dashboard</h1>
-					<ul class="breadcrumb">
-						<li>
-							<a href="#">Dashboard</a>
-						</li>
-						<li><i class='bx bx-chevron-right' ></i></li>
-						<li>
-							<a class="active" href="#">Home</a>
-						</li>
-					</ul>
-				</div>
-<!-- //stats -->
+				<div class="statistics">
+                    <canvas id="statsChart" width="400" height="200"></canvas>
+              
+                </div>
+
  <div class="statistics">
-            <canvas id="statsChart" width="400" height="200"></canvas>
-            <!-- <canvas id="statsGraph" width="400" height="200"></canvas> -->
+
+            <canvas id="statsGraph" width="400" height="200"></canvas>
         </div>
 				<div class="todo">
 	
@@ -147,7 +139,7 @@
 			<div class="table-data">
 				<div class="order">
 					<div class="head">
-						<h3>Recent Applications</h3>
+						<h3>All Time Customer's Details</h3>
 						<i class='bx bx-search' ></i>
 						<i class='bx bx-filter' ></i>
 					</div>
@@ -156,26 +148,31 @@
 						
 						</thead>
 						<tbody>
-							
-							<div class="applications" id="applications">
-								<table id="applicationsTable">
-									<thead >
-										<tr id="createbox">
-											
-											<th>Name</th>
-											<th>Phone</th>
-											<th>Email</th>
-											<th>Loan Amount</th>
-											<th>Action</th>
-										</tr>
-									</thead>
-									<tbody id="bodyborder"></tbody>
-								</table>
-							</div>
+                            <div class="userDetails" id="userDetails">
+                                <table id="userDetailsTable">
+                                    <thead>
+                                        <tr id="createbox">
+                                            <th>Name</th>
+                                            <th>Phone</th>
+                                            <th>Email</th>
+                                            <th>Type of Loan</th>
+                                            <th>Bank</th>
+                                            <th>Total Loan Amount</th>
+                                            <th>Total EMI</th>
+                                            <th>Remaining Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Data will be dynamically added here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            
 						</tbody>
 					</table>
 				</div>
-				
+				<div id="pagination"></div>
+                
 			</div>
 		</main>
 		<!-- MAIN -->
@@ -183,7 +180,7 @@
 	<!-- CONTENT -->
 	
 
-	<script src="Script/admin.js"></script>
+	<script src="Script/analytic.js"></script>
 </body>
 </html>
 
