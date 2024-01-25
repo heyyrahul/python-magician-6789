@@ -17,6 +17,7 @@ let interest = interestRate / 100 / 12;
 
 let myChart;
 
+
 const checkValues = () => {
   let loanAmountValue = loanAmountInput.value;
   let interestRateValue = interestRateInput.value;
@@ -168,18 +169,20 @@ async function getProducts() {
 async function getApplication(){
   try{
     await getProducts();
-    // console.log(appform);
-    // window.location.href = "./Thankyou.html";
+    window.location.href = "./Thankyou.html";
   }catch(error){
     console.log(error);
   }
 }
-applybutton.addEventListener("click", ()=>{
+applybutton.addEventListener("click", (event)=>{
+  event.preventDefault();
   getApplication();
   });
   
  
 
 
-
+  document.getElementById("mainlogo").addEventListener("click", () => {
+    window.location.href = "/index.html";
+})
 
