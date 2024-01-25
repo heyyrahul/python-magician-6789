@@ -26,12 +26,7 @@ body{
     scale: 2; 
 }
 .backpic{
-    /* height: 500px;
-    width: 500px;
-    z-index: 10;
-    position: absolute;
-    left: 70px;
-    top: 18%; */
+
     height: 500px;
     width: 500px;
     z-index: -10;
