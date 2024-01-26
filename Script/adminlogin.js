@@ -25,6 +25,9 @@ function handleLogin(event) {
 
         localStorage.setItem('loggedInAdmin', JSON.stringify(matchedAdmin));
         window.location.replace('admin.html');
+        usernameInput = "";
+        passwordInput = "";
+        loginMessage = "";
     } else {
         loginMessage.textContent = "Invalid username or password. Please try again.";
         loginMessage.style.color = "red";
@@ -38,3 +41,7 @@ loginbtn.addEventListener("click", () => {
 
     window.location.href = "login.html";
 });
+
+document.getElementById("mainlogo").addEventListener("click", () => {
+    window.location.href = "./index.html";
+})
