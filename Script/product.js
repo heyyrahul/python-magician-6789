@@ -183,6 +183,6 @@ applybutton.addEventListener("click", (event)=>{
 
 
   document.getElementById("mainlogo").addEventListener("click", () => {
-    window.location.href = "/index.html";
+    window.location.href = "./index.html";
 })
 

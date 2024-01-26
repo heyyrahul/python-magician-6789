@@ -19,7 +19,7 @@ li {
 	--lato: 'Lato', sans-serif;
 
 	--light: #F9F9F9;
-	--blue: #3C91E6;
+	--blue: #7FC1B1;
 	--light-blue: #CFE8FF;
 	--grey: #bff8dc;
 	--dark-grey: #AAAAAA;
@@ -634,17 +634,21 @@ body {
 /* --------------------------- */
 table {
     border-collapse: collapse;
-    border: 1px solid #1a9359; 
+    border: 1px solid #7FC1B1; 
     border-radius: 5%;
   }
+  
 th, td {
   
     padding: 8px; 
   }
   #createbox>th{
-    background-color:#28d280;
+    background-color:#7FC1B1;
 }
 
 button{
 margin:0% 10%;
+}
+#username{
+	margin-top: 20px;
 }

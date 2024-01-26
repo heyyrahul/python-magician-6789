@@ -104,7 +104,7 @@ function displayApplications(applications) {
             <td>${application.name}</td>
             <td>${application.phonenumber}</td>
             <td>${application.email}</td>
-            <td>₹${application.loanamount.toFixed(2)}</td>
+            <td>₹${application.loanamount}</td>
             <td>
                 <button class="accept-button" onclick="acceptApplication(${application.id})">Accept</button>
                 <button class="reject-button" onclick="rejectApplication(${application.id})">Reject</button>
@@ -288,7 +288,6 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.replace('adminlogin.html');
     }
 
-    fetchDataAndDisplay();
 });
 const admins = [
     { username: "heyyrahul", password: "Rahul@9870", name: "Rahul" },

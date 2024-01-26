@@ -634,13 +634,13 @@ header {
   }
   .swiper-wrapper{
     width: 100%;
-    height: 35vw;
+    height: 30vw;
     display: flex;
     align-items: center;
   }
   .card{
     width: 16.5vw;
-    height: auto;
+    height: 22vw;
     background-color: #7FC1B1;
     border-radius: 2vw;
     padding: 2vw 1.1vw;
