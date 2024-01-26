@@ -1,252 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/product.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/product.css" />
     <title>Product</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <!-- ------------------------Kushagra---------------------------->
     <nav class="navbar">
       <span class="logo-gradient-text logotxt" id="mainlogo">SyLoan</span>
       <div class="menues">
-          <a class="menu" href="product.html">Product</a>
-          <a class="menu" href="company.html">Company</a>
-          <a class="menu" href="support.html">Support</a>
+        <a class="menu" href="product.html">Product</a>
+        <a class="menu" href="company.html">Company</a>
+        <a class="menu" href="support.html">Support</a>
       </div>
-      <div style="display: flex; box-sizing: border-box;">
-          <button class="loginbtn">Login</button>
-          <button class="hamburger-btn"><i class="fa-solid fa-bars"></i></button>
+      <div style="display: flex; box-sizing: border-box">
+        <button class="loginbtn">Login</button>
+        <button class="hamburger-btn"><i class="fa-solid fa-bars"></i></button>
       </div>
-
-  </nav>
+    </nav>
     <div class="container">
       <div class="loan-calculator">
         <div class="top">
           <h1>Loan Calculator</h1>
-  
+
           <form action="#" id="ipts">
             <div class="group">
               <div class="title">Amount</div>
-              <input type="text" placeholder="₹ Enter Amt" class="loan-amount" oninput="formatAmount(this.value)" />
+              <input
+                type="text"
+                placeholder="₹ Enter Amt"
+                class="loan-amount"
+                oninput="formatAmount(this.value)"
+              />
             </div>
-  
+
             <div class="group">
               <div class="title">Interest Rate</div>
               <input type="text" placeholder="%" class="interest-rate" />
             </div>
-  
+
             <div class="group">
               <div class="title">Tenure</div>
               <input type="text" placeholder=" In Months" class="loan-tenure" />
             </div>
           </form>
         </div>
-  
+
         <div class="result">
           <div class="left">
-  
             <div class="loan-emi">
               <h3>Loan EMI</h3>
               <div class="value" aria-placeholder="EMI"></div>
             </div>
-  
+
             <div class="total-interest">
               <h3>Total Interest Payable</h3>
               <div class="value" aria-placeholder="Interest"></div>
             </div>
-  
+
             <div class="total-amount">
               <h3>Total Amount</h3>
               <div class="value" aria-placeholder="Amount"></div>
             </div>
-              <button class="calculate-btn">Calculate</button>
+            <button class="calculate-btn">Calculate</button>
           </div>
-  
+
           <div class="right">
             <canvas id="myChart" width="400" height="400"></canvas>
           </div>
         </div>
       </div>
-  
+
       <div class="forms">
-         <form method="GET" class="newform">
-          
+        <form method="GET" class="newform">
           <div id="application-header">
             <h1>Application Form</h1>
           </div>
-          <div id ="body">
-          <!-- Name -->
-          <label for="name" >Name:</label>
-          <input type="text" id="name" name="name" required placeholder="Enter Name"><br>
-  
-          <!-- Email -->
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email"  placeholder="Enter Email" required><br>
-  
-           <!-- Phone Number -->
-           <label for="phone" oninput="validateAmount(this)">Phone Number:</label>
-           <input type="tel" id="phone" name="phone"  placeholder="Enter Phone" required><br>
-   
-  
-          <div class="address">
-            <!-- City -->
-            <div>
-              <label for="city">City:</label>
-            <input type="text" id="city" name="city"  placeholder="Enter City" required><br>
-  
+          <div id="body">
+            <!-- Name -->
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Enter Name"
+            /><br />
+
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter Email"
+              required
+            /><br />
+
+            <!-- Phone Number -->
+            <label for="phone" oninput="validateAmount(this)"
+              >Phone Number:</label
+            >
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter Phone"
+              required
+            /><br />
+
+            <div class="address">
+              <!-- City -->
+              <div>
+                <label for="city">City:</label>
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  placeholder="Enter City"
+                  required
+                /><br />
+              </div>
+              <!-- State -->
+              <div>
+                <label for="state">State:</label>
+                <input
+                  type="text"
+                  id="state"
+                  name="state"
+                  placeholder="Enter State"
+                  required
+                /><br />
+              </div>
             </div>
-            <!-- State -->
-            <div>
-              <label for="state">State:</label>
-            <input type="text" id="state" name="state"  placeholder="Enter State" required><br>
+
+            <div class="cards">
+              <!-- Aadhar Number -->
+              <div>
+                <label for="aadhar" oninput="validateAmount(this)"
+                  >Aadhar Number:</label
+                >
+                <input
+                  type="text"
+                  id="aadhar"
+                  name="aadhar"
+                  placeholder="Enter Aadhar"
+                  required
+                /><br />
+              </div>
+
+              <!-- PAN Number -->
+              <div>
+                <label for="pan">PAN Number:</label>
+                <input
+                  type="text"
+                  id="pan"
+                  name="pan"
+                  placeholder="Enter Pan"
+                  required
+                /><br />
+              </div>
+            </div>
+
+            <!-- Loan Amount -->
+            <label for="loanAmount">Loan Amount:</label>
+            <input
+              type="number"
+              id="loanAmount"
+              name="loanAmount"
+              placeholder="Select Amount"
+              required
+            /><br />
+
+            <!-- Apply Button -->
+            <div class="apply">
+              <button id="applybutton" type="submit" class="applybtn">
+                Apply
+              </button>
             </div>
           </div>
-  
-          <div class="cards">
-  
-            <!-- Aadhar Number -->
-            <div>
-              <label for="aadhar" oninput="validateAmount(this)">Aadhar Number:</label>
-            <input type="text" id="aadhar" name="aadhar"  placeholder="Enter Aadhar" required><br>
-            </div>
-  
-            <!-- PAN Number -->
-            <div>
-              <label for="pan">PAN Number:</label>
-            <input type="text" id="pan" name="pan"  placeholder="Enter Pan" required><br>
-            </div>
-          </div>
-  
-          <!-- Loan Amount -->
-          <label for="loanAmount">Loan Amount:</label>
-          <input type="number" id="loanAmount" name="loanAmount"  placeholder="Select Amount" required><br>
-  
-          <!-- Apply Button -->
-          <div class="apply" >
-            <button id = "applybutton" type="submit" class="applybtn">Apply</button>
-          </div>
-        </div>
         </form>
       </div>
-  
     </div>
-   
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
 
     <div class="loanhead">
       <h1 id="loanhead">Loan Category</h1>
     </div>
-   <div id="types">
-    <div class="ui-card">
-      <img src="images/calc.jpg">
-      <div class="description">
-        <h3>Personal Loan</h3>
-        <p>1:Competitive Interest Rates. 2:Flexible Repayment Terms. 3:No Collateral Required....</p>
-        <a href="#">Read More</a>
+    <div id="types">
+      <div class="ui-card">
+        <img src="images/calc.jpg" />
+        <div class="description">
+          <h3>Personal Loan</h3>
+          <p>
+            1:Competitive Interest Rates. 2:Flexible Repayment Terms. 3:No
+            Collateral Required....
+          </p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="ui-card">
+        <img src="images/educationloan.jpg" />
+        <div class="description">
+          <h3>Education Loan</h3>
+          <p>
+            1:Coverage of Various Educational Expenses.2:Grace Period for Job
+            Placement....
+          </p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="ui-card">
+        <img src="images/homeloans.jpg " />
+        <div class="description">
+          <h3>Home Loan</h3>
+          <p>1:Home Loan Insurance.2:Quick Approval and Disbursement....</p>
+          <a href="#">Read More</a>
+        </div>
       </div>
     </div>
-    <div class="ui-card">
-      <img src="images/education.jpg">
-      <div class="description">
-        <h3>Education Loan</h3>
-        <p>1:Coverage of Various Educational Expenses.2:Grace Period for Job Placement....</p>
-        <a href="#">Read More</a>
-      </div>
-    </div>
-    <div class="ui-card">
-      <img src="images/homeloan.jpg ">
-      <div class="description">
-        <h3>Home Loan</h3>
-        <p>1:Home Loan Insurance.2:Quick Approval and Disbursement....</p>
-        <a href="#">Read More</a>
-      </div>
-    </div>
-   </div>
-
     
-
-
+    <div id="types">
+      <div class="ui-card">
+        <img src="images/carloan.jpg" />
+        <div class="description">
+          <h3>Vehicle Loan</h3>
+          <p>
+            1:Competitive Interest Rates. 2:Flexible Repayment Terms. 3:No
+            Collateral Required....
+          </p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="ui-card">
+        <img src="images/gold.jpg" />
+        <div class="description">
+          <h3>Gold Loan</h3>
+          <p>
+            1:Coverage of Various Educational Expenses.2:Grace Period for Job
+            Placement....
+          </p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="ui-card">
+        <img src="images/Business.jpg" />
+        <div class="description">
+          <h3> Buisness Loan</h3>
+          <p>1:Home Loan Insurance.2:Quick Approval and Disbursement....</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div id="types">
+      <div class="ui-card">
+        <img src="images/education.jpg" />
+        <div class="description">
+          <h3>Equity Loans</h3>
+          <p>
+            1:Competitive Interest Rates. 2:Flexible Repayment Terms. 3:No
+            Collateral Required....
+          </p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="ui-card">
+        <img src="images/self.jpg" />
+        <div class="description">
+          <h3>Wedding Loan</h3>
+          <p>
+            1:Coverage of Various Educational Expenses.2:Grace Period for Job
+            Placement....
+          </p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="ui-card">
+        <img src="images/homeloan.jpg " />
+        <div class="description">
+          <h3>Mortgage Loan</h3>
+          <p>1:Home Loan Insurance.2:Quick Approval and Disbursement....</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
     <!-- -----------------------------footer------------------------------>
     <footer class="footer">
       <div class="footer-top">
-          <h1>
-              Growww <span class="gradient-text">Your Business</span>, <br>Take Your Step with Us!
-          </h1>
-          <button class="contactusbtn">Contact us</button>
+        <h1>
+          Growww <span class="gradient-text">Your Business</span>, <br />Take
+          Your Step with Us!
+        </h1>
+        <button class="contactusbtn">Contact us</button>
       </div>
       <hr />
       <div class="footer-bottom">
+        <div>
+          <div class="logobox">
+            <span class="logo-gradient-text logotxt">SyLoan</span>
+          </div>
+          <p>
+            No matter how your customers want to pay, we can help you find the
+            right
+          </p>
+          <div class="social-icons">
+            <div>
+              <i class="fa-brands fa-xl fa-instagram"></i>
+            </div>
+            <div>
+              <i class="fa-brands fa-xl fa-facebook"></i>
+            </div>
+            <div>
+              <i class="fa-brands fa-xl fa-twitter"></i>
+            </div>
+            <div>
+              <i class="fa-brands fa-xl fa-youtube"></i>
+            </div>
+            <div>
+              <i class="fa-brands fa-xl fa-linkedin-in"></i>
+            </div>
+          </div>
+        </div>
+        <div class="quickmenues">
+          <h2 class="Footerheading">Quick Menu</h2>
           <div>
-              <div class="logobox">
-                  <span class="logo-gradient-text logotxt">SyLoan</span>
-              </div>
-              <p>
-                  No matter how your customers want to pay, we can help you find the right
-              </p>
-              <div class="social-icons">
-                  <div>
-                      <i class="fa-brands fa-xl fa-instagram"></i>
-                  </div>
-                  <div>
-                      <i class="fa-brands fa-xl fa-facebook"></i>
-                  </div>
-                  <div>
-                      <i class="fa-brands fa-xl fa-twitter"></i>
-                  </div>
-                  <div>
-                      <i class="fa-brands fa-xl fa-youtube"></i>
-                  </div>
-                  <div>
-                      <i class="fa-brands fa-xl fa-linkedin-in"></i>
-                  </div>
-              </div>
+            <div>
+              <p><a class="quickmenu" href="adminlogin.html">Admin Login</a></p>
+              <p><a class="quickmenu" href="product.html">Product</a></p>
+              <p><a class="quickmenu" href="company.html">Company</a></p>
+              <p><a class="quickmenu" href="support.html">Support</a></p>
+            </div>
+            <div>
+              <p><a class="quickmenu" href="#">Help</a></p>
+              <p><a class="quickmenu" href="#">Privacy Policy</a></p>
+            </div>
           </div>
-          <div class="quickmenues">
-              <h2 class="Footerheading">Quick Menu</h2>
-              <div>
-                  <div>
-                      <p><a class="quickmenu" href="adminlogin.html">Admin Login</a></p>
-                      <p><a class="quickmenu" href="product.html">Product</a></p>
-                      <p><a class="quickmenu" href="company.html">Company</a></p>
-                      <p><a class="quickmenu" href="support.html">Support</a></p>
-                  </div>
-                  <div>
-                      <p><a class="quickmenu" href="#">Help</a></p>
-                      <p><a class="quickmenu" href="#">Privacy Policy</a></p>
-                  </div>
-              </div>
-          </div>
-          <div class="location">
-              <p>
-                  <i class="fa-solid fa-xl fa-location-dot" style="margin-right: 10px;"></i>
-                  8502 Preston Rd. Manchester, Maine 98380, UK
-              </p>
-              <p>
-                  <i class="fa-solid fa-xl fa-envelope" style="margin-right: 10px;"></i> info@syloan.co
-              </p>
-              <p>
-                  <i class="fa-solid fa-xl fa-phone" style="margin-right: 10px;"></i>
-                  +44 (0)20 7123 4567
-              </p>
-          </div>
+        </div>
+        <div class="location">
+          <p>
+            <i
+              class="fa-solid fa-xl fa-location-dot"
+              style="margin-right: 10px"
+            ></i>
+            8502 Preston Rd. Manchester, Maine 98380, UK
+          </p>
+          <p>
+            <i
+              class="fa-solid fa-xl fa-envelope"
+              style="margin-right: 10px"
+            ></i>
+            info@syloan.co
+          </p>
+          <p>
+            <i class="fa-solid fa-xl fa-phone" style="margin-right: 10px"></i>
+            +44 (0)20 7123 4567
+          </p>
+        </div>
       </div>
-      <p class="copyright">
-          ©Copyright 2023. All rights reserved.
-      <p>
-  </footer>
-  
-  <!---------------------- Scripts ----------------------->
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script src="Script/index.js"></script>
-  <script src="https://kit.fontawesome.com/a88c1550a0.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script src ="Script/product.js"></script>
- 
-</body>
-</html>
+      <p class="copyright">©Copyright 2023. All rights reserved.</p>
 
+      <p></p>
+    </footer>
+
+    <!---------------------- Scripts ----------------------->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a88c1550a0.js" crossorigin="anonymous"></script>
+    <script src="Script/index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a88c1550a0.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="Script/product.js"></script>
+  </body>
+</html>
 
 <!-- //randomtext -->
