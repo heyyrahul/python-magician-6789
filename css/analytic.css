@@ -19,7 +19,7 @@ li {
 	--lato: 'Lato', sans-serif;
 
 	--light: #F9F9F9;
-	--blue: #3C91E6;
+	--blue: #7FC1B1;
 	--light-blue: #CFE8FF;
 	--grey: #bff8dc;
 	--dark-grey: #AAAAAA;
@@ -600,13 +600,13 @@ body {
 /* UserDetails----------->>>>>>>>>>>> */
 table {
     border-collapse: collapse;
-    border: 1px solid #1a9359; 
-    border-radius: 5%;/* Border style and width */
+    border: 1px solid #7FC1B1; 
+    border-radius: 5%;
   }
 th, td {
-    border: 1px solid #1a9359; /* Border style and width */
-    padding: 8px; /* Optional: Add padding to cells */
+    border: 1px solid #7FC1B1;
+    padding: 8px; 
   }
   #createbox>th{
-    background-color:#28d280;
+    background-color:#7FC1B1;
 }

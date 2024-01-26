@@ -1,3 +1,19 @@
+let notificationsElement = document.getElementById("notifications");
+
+async function fetchNotifications() {
+    try {
+        let res = await fetch("https://kushagrapathak-mock-api-server.onrender.com/loanform");
+        let data = await res.json();
+        // Update the notifications count
+        notificationsElement.textContent = data.length;
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+fetchNotifications(); 
+
+
 const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
 
 allSideMenu.forEach(item=> {
@@ -10,8 +26,6 @@ allSideMenu.forEach(item=> {
 		li.classList.add('active');
 	})
 });
-
-
 
 
 // TOGGLE SIDEBAR
@@ -78,10 +92,6 @@ switchMode.addEventListener('change', function () {
 ///external code
 
 
-// applications
-
-
-
 // Function to fetch applications and display them
 function fetchApplicationsAndDisplay() {
     fetch('https://kushagrapathak-mock-api-server.onrender.com/loanform')
@@ -125,13 +135,28 @@ function acceptApplication(applicationId) {
 }
 
 
-// Function to reject an application
+
 function rejectApplication(applicationId) {
     // Placeholder logic for rejecting application
     console.log(`Application ${applicationId} rejected`);
     const applicationRow = document.querySelector(`#applicationsTable tbody tr[data-id="${applicationId}"]`);
     if (applicationRow) {
         applicationRow.remove();
+        // Remove data from the server
+        fetch(`https://kushagrapathak-mock-api-server.onrender.com/loanform/${applicationId}`, {
+            method: 'DELETE'
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to delete application');
+            }
+            fetchNotifications(); 
+            console.log(`Application ${applicationId} deleted from the server`);
+        })
+        .catch(error => {
+            console.error('Error deleting application:', error);
+            
+        });
     }
 }
 
@@ -270,31 +295,45 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //admin name
-function showAdminPage() {
-    
-    const adminPage = document.getElementById('adminPage');
-
-    adminPage.style.display = 'block';
-}
-document.addEventListener('DOMContentLoaded', () => {
-    const loggedInAdmin = getLoggedInAdmin();
-
-    if (loggedInAdmin) {
-        const adminNameElement = document.getElementById('adminName');
-        adminNameElement.textContent = `Hello ${loggedInAdmin.name} !`;
-
-        showAdminPage();
-    } else {
-        window.location.replace('adminlogin.html');
-    }
-
-});
+let pic = document.getElementById("userpic");
 const admins = [
     { username: "heyyrahul", password: "Rahul@9870", name: "Rahul" },
     { username: "kushpathak", password: "Kush@4563", name: "Kush" },
     { username: "bansalnaman", password: "Bansal@6969", name: "Naman" },
     { username: "kadampranoti", password: "kadam@pranoti", name: "Pranoti" }
 ];
+
+function showAdminPage() {
+    const adminPage = document.getElementById('adminPage');
+    adminPage.style.display = 'block';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const loggedInAdmin = getLoggedInAdmin();
+
+    if (loggedInAdmin) {
+        const adminNameElement = document.getElementById('adminName');
+        adminNameElement.textContent = `Hello ${loggedInAdmin.name} !`;
+        showAdminPage();
+
+        // Loop through the admins array to find a match
+        admins.forEach(admin => {
+            if (loggedInAdmin.name === admin.username) {
+                pic.setAttribute('src', `./images/${admin.name.toLowerCase()}.jpg`);
+            
+            }
+        });
+    } else {
+        window.location.replace('adminlogin.html');
+    }
+});
+
+// Function to retrieve logged-in admin details from local storage
+function getLoggedInAdmin() {
+    return JSON.parse(localStorage.getItem('loggedInAdmin'));
+}
+
+
 
 function getLoggedInAdmin() {
     // Retrieve logged-in admin details from local storage

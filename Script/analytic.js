@@ -1,3 +1,21 @@
+let notificationsElement = document.getElementById("notifications");
+
+async function fetchNotifications() {
+    try {
+        let res = await fetch("https://kushagrapathak-mock-api-server.onrender.com/loanform");
+        let data = await res.json();
+        // Update the notifications count
+        notificationsElement.textContent = data.length;
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+fetchNotifications(); 
+    
+
+
+
 document.addEventListener('DOMContentLoaded', fetchApplicationsAndDisplay);
 
 async function fetchApplicationsAndDisplay() {
