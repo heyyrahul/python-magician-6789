@@ -59,7 +59,8 @@ SyLoan is a user-friendly and versatile online platform that provides a seamless
 
 
 **LOGIN AND SIGN IN**
-![signIn](https://github.com/heyyrahul/python-magician-6789/assets/79692865/cb3bef7a-79bf-4edf-ba35-d7e7503dbdd4)
+![login](https://github.com/heyyrahul/python-magician-6789/assets/79692865/e2492239-d727-411f-922e-3f6669270593)
+
 
 
 
