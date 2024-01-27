@@ -79,7 +79,8 @@ SyLoan is a user-friendly and versatile online platform that provides a seamless
 **ADMIN LOGIN**
 ![adminlogin](https://github.com/heyyrahul/python-magician-6789/assets/79692865/3b1e8269-4e35-42a2-9898-db793a9c0199)
 **ADMIN PAGE**
-![admin](https://github.com/heyyrahul/python-magician-6789/assets/79692865/d89a69d9-3b2a-4e15-8a94-dbc79f351e9f)
+![admin dashboard](https://github.com/heyyrahul/vivid-roll-405/assets/79692865/d8e7eb3b-c80c-4058-91a4-1780249d726f)
+
 **RESPONSIVENESS**
 ![res](https://github.com/heyyrahul/vivid-roll-405/assets/79692865/cb99fa72-bdb1-4b88-86cd-cbdb04f8fea9)
 
