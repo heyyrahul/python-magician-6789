@@ -1894,6 +1894,7 @@ img {
   font-size: var(--small-font-size);
   font-weight: 500;
   color: var(--first-color);
+  
 }
 
 .card__button:hover {
