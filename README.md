@@ -66,7 +66,8 @@ SyLoan is a user-friendly and versatile online platform that provides a seamless
 
 **PRODUCT PAGE**
 
-![products](https://github.com/heyyrahul/vivid-roll-405/assets/79692865/d7835b0d-88d1-47d2-86ca-a5d53f1d7944)
+![product](https://github.com/heyyrahul/python-magician-6789/assets/79692865/731aaa44-83f8-458a-a7af-e712f89e7cce)
+
 
 
 
