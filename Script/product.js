@@ -126,10 +126,9 @@ const init = () => {
 };
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Your existing code here
   
    
-  
+
     calculateBtn.addEventListener("click", calculateAndUpdate);
     init();
   });
