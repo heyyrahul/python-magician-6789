@@ -57,20 +57,25 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to handle sign up
     async function signUp(name, email, password) {
         try {
-            const response = await fetch("https://kushagrapathak-mock-api-server.onrender.com/users");
-            const users = await response.json();
-
-            const existingUser = users.find(u => u.email === email);
-
-            if (existingUser) {
-                alert("Email already exists. Please use a different email.");
-            } else {
+            const response = await fetch("https://kushagrapathak-mock-api-server.onrender.com/users", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, email, password })
+            });
+    
+            if (response.ok) {
                 alert("Sign up successful!");
+            
+            } else {
+                alert("Sign up failed. Please try again later.");
             }
         } catch (error) {
-            console.error("Error fetching user data:", error);
+            console.error("Error signing up:", error);
         }
     }
+    
 
     // Event listener for sign up form
     signUpForm.addEventListener("submit", function (event) {
