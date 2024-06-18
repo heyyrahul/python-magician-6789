@@ -40,7 +40,7 @@ SyLoan is a user-friendly and versatile online platform that provides a seamless
 
    ```bash
    git clone https://github.com/your-username/python-magician-6789.git
-   cd bigbasket
+   cd python-magician-6789
 2. Unzip the file if you've downloaded  it as a ZIP.
 3. Open the folder in your text editor.
 4. Use a SASS compiler to compile the `.scss` files to `.css` or edit the CSS directly.
